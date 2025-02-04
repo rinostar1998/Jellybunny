@@ -4,6 +4,7 @@
 
 #include <stdio.h>
 #include "Jellybunny/Application.h"
+#include "Jellybunny/Log.h"
 
 
 // ENTRY POINT ********************

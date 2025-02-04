@@ -1,36 +1,63 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Jellybunny">
+      <UniqueIdentifier>{F1789B9C-DD30-DDE9-4638-B645320F78DA}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="Jellybunny\Event">
+      <UniqueIdentifier>{022BAE9B-EE23-CDED-1756-B27203AEACF9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Jellybunny\Platform">
+      <UniqueIdentifier>{6554A358-D1B5-8066-5A23-C718C683B725}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Jellybunny\Platform\Windows">
+      <UniqueIdentifier>{9F93DD9B-0BA1-0B82-9487-076D0094D738}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Jellybunny\Core.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClInclude Include="src\Jellybunny.h" />
     <ClInclude Include="src\Jellybunny\Application.h">
-      <Filter>Header Files</Filter>
+      <Filter>Jellybunny</Filter>
     </ClInclude>
-    <ClInclude Include="src\Jellybunny.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\Jellybunny\Core.h">
+      <Filter>Jellybunny</Filter>
     </ClInclude>
     <ClInclude Include="src\Jellybunny\EntryPoint.h">
-      <Filter>Header Files</Filter>
+      <Filter>Jellybunny</Filter>
     </ClInclude>
+    <ClInclude Include="src\Jellybunny\Event\ApplicationEvent.h">
+      <Filter>Jellybunny\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Jellybunny\Event\Event.h">
+      <Filter>Jellybunny\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Jellybunny\Event\KeyEvent.h">
+      <Filter>Jellybunny\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Jellybunny\Event\MouseEvent.h">
+      <Filter>Jellybunny\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Jellybunny\Log.h">
+      <Filter>Jellybunny</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Jellybunny\Platform\Windows\WindowsWindow.h">
+      <Filter>Jellybunny\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Jellybunny\Window.h">
+      <Filter>Jellybunny</Filter>
+    </ClInclude>
+    <ClInclude Include="src\jbpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Jellybunny\Application.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Jellybunny</Filter>
     </ClCompile>
+    <ClCompile Include="src\Jellybunny\Log.cpp">
+      <Filter>Jellybunny</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Jellybunny\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Jellybunny\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jbpch.cpp" />
   </ItemGroup>
 </Project>
