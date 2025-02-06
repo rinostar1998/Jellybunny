@@ -5,3 +5,6 @@
 	path = Hazel/vendor/GLFW
 	url = ../../TheCherno/glfw.git
 	branch = master
+[submodule "Jellybunny/vendor/imgui"]
+	path = Jellybunny/vendor/imgui
+	url = https://github.com/TheCherno/imgui

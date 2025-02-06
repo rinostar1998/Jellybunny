@@ -15,7 +15,9 @@
 	#define JB_CORE_ASSERT(x, ...) { if(!(x)) { JB_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
 #else
 	#define JB_ASSERT(x, ...)
-	#define JB_CORE_ASSERT(x, ...)
+	#define JB_CORE_ASS(x, ...)
 #endif
 
 #define BIT(x) (1 << x)
+
+#define JB_BIND_EVENT_FN(fn) std::bind(&fn, this, std::placeholders::_1)

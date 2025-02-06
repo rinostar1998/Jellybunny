@@ -7,8 +7,14 @@
     <Filter Include="Jellybunny\Event">
       <UniqueIdentifier>{022BAE9B-EE23-CDED-1756-B27203AEACF9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Jellybunny\ImGui">
+      <UniqueIdentifier>{DB1EF19B-C717-10EE-F049-F572DCA1EFF9}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Jellybunny\Platform">
       <UniqueIdentifier>{6554A358-D1B5-8066-5A23-C718C683B725}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Jellybunny\Platform\OpenGL">
+      <UniqueIdentifier>{F9797295-E589-1E66-4E43-83843A720DFF}</UniqueIdentifier>
     </Filter>
     <Filter Include="Jellybunny\Platform\Windows">
       <UniqueIdentifier>{9F93DD9B-0BA1-0B82-9487-076D0094D738}</UniqueIdentifier>
@@ -37,27 +43,56 @@
     <ClInclude Include="src\Jellybunny\Event\MouseEvent.h">
       <Filter>Jellybunny\Event</Filter>
     </ClInclude>
+    <ClInclude Include="src\Jellybunny\ImGui\ImGuiLayer.h">
+      <Filter>Jellybunny\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Jellybunny\Layer.h">
+      <Filter>Jellybunny</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Jellybunny\LayerStack.h">
+      <Filter>Jellybunny</Filter>
+    </ClInclude>
     <ClInclude Include="src\Jellybunny\Log.h">
       <Filter>Jellybunny</Filter>
     </ClInclude>
-    <ClInclude Include="src\Jellybunny\Platform\Windows\WindowsWindow.h">
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Jellybunny\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Jellybunny\Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\Jellybunny\Window.h">
       <Filter>Jellybunny</Filter>
     </ClInclude>
     <ClInclude Include="src\jbpch.h" />
+    <ClInclude Include="src\Jellybunny\Input.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
+    <ClInclude Include="src\Jellybunny\KeyCodes.h" />
+    <ClInclude Include="src\Jellybunny\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Jellybunny\Application.cpp">
       <Filter>Jellybunny</Filter>
     </ClCompile>
+    <ClCompile Include="src\Jellybunny\ImGui\ImGuiLayer.cpp">
+      <Filter>Jellybunny\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Jellybunny\Layer.cpp">
+      <Filter>Jellybunny</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Jellybunny\LayerStack.cpp">
+      <Filter>Jellybunny</Filter>
+    </ClCompile>
     <ClCompile Include="src\Jellybunny\Log.cpp">
       <Filter>Jellybunny</Filter>
     </ClCompile>
-    <ClCompile Include="src\Jellybunny\Platform\Windows\WindowsWindow.cpp">
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Jellybunny\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>Jellybunny\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\jbpch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
 </Project>

@@ -14,8 +14,12 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "Jellybunny/vendor/GLFW/include"
+IncludeDir["Glad"] = "Jellybunny/vendor/Glad/include"
+IncludeDir["ImGui"] = "Jellybunny/vendor/imgui"
 
 include "Jellybunny/vendor/GLFW"
+include "Jellybunny/vendor/Glad"
+include "Jellybunny/vendor/imgui"
 
 project "Jellybunny"
 	location "Jellybunny"
@@ -40,12 +44,16 @@ project "Jellybunny"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
+		"ImGui",
 		"opengl32.lib",
 		"User32.lib",
 		"Gdi32.lib",
@@ -65,7 +73,8 @@ project "Jellybunny"
 		defines
 		{
 			"JB_PLATFORM_WINDOWS",
-			"JB_BUILD_DLL"
+			"JB_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
@@ -76,17 +85,17 @@ project "Jellybunny"
 
 	filter "configurations:Debug"
 		defines "JB_DEBUG"
-		buildoptions "/MTd"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "JB_RELEASE"
-		buildoptions "/MT"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "JB_DIST"
-		buildoptions "/MT"
+		buildoptions "/MD"
 		optimize "On"
 
 project "Sandbox-Test"
@@ -128,15 +137,15 @@ project "Sandbox-Test"
 
 	filter "configurations:Debug"
 		defines "JB_DEBUG"
-		buildoptions "/MTd"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "JB_RELEASE"
-		buildoptions "/MT"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "JB_DIST"
-		buildoptions "/MT"
+		buildoptions "/MD"
 		optimize "On"
