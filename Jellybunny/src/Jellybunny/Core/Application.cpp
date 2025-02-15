@@ -1,11 +1,12 @@
 #include "jbpch.h"
 #include "Application.h"
 
-#include "Jellybunny/Log.h"
+#include "Jellybunny/Core/Log.h"
 
-#include <glad/glad.h>
+#include "Jellybunny/Renderer/Renderer.h"
 
 #include "Input.h"
+#include <glfw/glfw3.h>
 
 namespace Jellybunny
 {
@@ -20,6 +21,11 @@ namespace Jellybunny
 		s_Instance = this;
 		m_Window = std::unique_ptr<Window>(Window::Create());
 		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
+
+		Renderer::Init();
+
+		m_ImGuiLayer = new ImGuiLayer();
+		PushOverlay(m_ImGuiLayer);
 	}
 
 	Application::~Application()
@@ -42,6 +48,8 @@ namespace Jellybunny
 	{
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClosed));
+		dispatcher.Dispatch<WindowResizeEvent>(BIND_EVENT_FN(OnWindowResize));
+
 		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin(); )
 		{
 			(*--it)->OnEvent(e);
@@ -52,14 +60,22 @@ namespace Jellybunny
 
 	void Application::Run()
 	{
-
 		while (m_Running)
 		{
-			glClearColor(0.1f, 0, 0, 1);
-			glClear(GL_COLOR_BUFFER_BIT);
+			float time = (float)glfwGetTime();
+			Timestep timestep = Timestep(time - m_LastFrame, time);
+			m_LastFrame = time;
 
+			if (!m_Minimized)
+			{
+				for (Layer* layer : m_LayerStack)
+					layer->OnUpdate(timestep);
+			}
+
+			m_ImGuiLayer->Begin();
 			for (Layer* layer : m_LayerStack)
-				layer->OnUpdate();
+				layer->OnImGuiRender();
+			m_ImGuiLayer->End();
 
 			auto [x, y] = Input::GetMousePosition();
 
@@ -72,4 +88,13 @@ namespace Jellybunny
 		m_Running = false;
 		return true;
 	}
+
+	bool Application::OnWindowResize(WindowResizeEvent& e)
+	{
+		if (e.GetWidth() == 0 || e.GetHeight() == 0) { m_Minimized = true;  return false; }
+		m_Minimized = false;
+		Renderer::OnWindowResize(e.GetWidth(), e.GetHeight());
+		return false;
+	}
+
 }

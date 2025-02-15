@@ -1,6 +1,7 @@
 #pragma once
 
-#include "Jellybunny/Window.h"
+#include "Jellybunny/Core/Window.h"
+#include "Jellybunny/Renderer/GraphicsContext.h"
 
 #include <GLFW/glfw3.h>
 
@@ -29,6 +30,7 @@ namespace Jellybunny
 		virtual void Shutdown();
 	private:
 		GLFWwindow* m_Window;
+		GraphicsContext* m_Context;
 
 		struct WindowData
 		{

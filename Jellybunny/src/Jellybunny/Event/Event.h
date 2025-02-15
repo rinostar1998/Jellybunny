@@ -1,7 +1,7 @@
 #pragma once
 
 #include "jbpch.h"
-#include "Jellybunny/Core.h"
+#include "Jellybunny/Core/Core.h"
 
 namespace Jellybunny {
 

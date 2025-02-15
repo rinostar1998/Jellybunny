@@ -8,3 +8,6 @@
 [submodule "Jellybunny/vendor/imgui"]
 	path = Jellybunny/vendor/imgui
 	url = https://github.com/TheCherno/imgui
+[submodule "Jellybunny/vendor/glm"]
+	path = Jellybunny/vendor/glm
+	url = https://github.com/g-truc/glm

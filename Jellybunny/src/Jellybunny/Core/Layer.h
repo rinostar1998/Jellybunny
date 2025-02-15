@@ -1,6 +1,7 @@
 #pragma once
 
-#include "Jellybunny/Core.h"
+#include "Jellybunny/Core/Core.h"
+#include "Jellybunny/Core/Timestep.h"
 #include "Jellybunny/Event/Event.h"
 
 namespace Jellybunny {
@@ -11,7 +12,8 @@ namespace Jellybunny {
 		virtual ~Layer();
 		virtual void OnAttach() {}
 		virtual void OnDetach() {}
-		virtual void OnUpdate() {}
+		virtual void OnUpdate(Timestep time) {}
+		virtual void OnImGuiRender() {}
 		virtual void OnEvent(Event& event) {}
 		inline const std::string& GetName() const { return m_DebugName; }
 	protected:

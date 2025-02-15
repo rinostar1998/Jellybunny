@@ -5,7 +5,8 @@
 #include "Jellybunny/Event/MouseEvent.h"
 #include "Jellybunny/Event/KeyEvent.h"
 
-#include <glad/glad.h>
+#include "Platform/OpenGL/OpenGLContext.h"
+
 
 namespace Jellybunny
 {
@@ -40,6 +41,7 @@ namespace Jellybunny
 
 		JB_CORE_IFO("Creating window {0} ({1}, {2})", props.Title, props.Width, props.Height);
 
+
 		if (!s_GLFWInitialized)
 		{
 			// TODO: glfwTerminate on system shutdown
@@ -50,9 +52,11 @@ namespace Jellybunny
 		}
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
-		glfwMakeContextCurrent(m_Window);
-		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
-		JB_CORE_ASS(status, "FAILED TO INIT GLAD!");
+		
+		m_Context = new OpenGLContext(m_Window);
+		m_Context->Init();
+
+
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 
@@ -152,7 +156,7 @@ namespace Jellybunny
 	void WindowsWindow::OnUpdate()
 	{
 		glfwPollEvents();
-		glfwSwapBuffers(m_Window);
+		m_Context->SwapBuffers();
 	}
 
 	void WindowsWindow::SetVSync(bool enabled)

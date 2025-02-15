@@ -2,7 +2,7 @@
 #include "WindowsInput.h"
 
 #include <GLFW/glfw3.h>
-#include "Jellybunny/Application.h"
+#include "Jellybunny/Core/Application.h"
 
 namespace Jellybunny
 {

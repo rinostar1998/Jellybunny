@@ -1,8 +1,8 @@
 #pragma once
 #include "jbpch.h"
-#include "Jellybunny/Core.h"
+#include "Jellybunny/Core/Core.h"
 #include "Jellybunny/Event/Event.h"
-#include "Jellybunny/Log.h"
+#include "Jellybunny/Core/Log.h"
 
 namespace Jellybunny
 {

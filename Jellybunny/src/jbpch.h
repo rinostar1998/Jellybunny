@@ -8,11 +8,12 @@
 
 #include <string>
 #include <sstream>
+#include <array>
 #include <vector>
 #include <unordered_map>
 #include <unordered_set>
 
-#include "Jellybunny/Log.h"
+#include "Jellybunny/Core/Log.h"
 
 #ifdef JB_PLATFORM_WINDOWS
 	#include <Windows.h>

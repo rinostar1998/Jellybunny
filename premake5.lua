@@ -1,4 +1,8 @@
 workspace "Jellybunny"
+
+	filter "action:vs*"
+		toolset "v143"
+
 	architecture "x64"
 
 	configurations{
@@ -16,15 +20,20 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Jellybunny/vendor/GLFW/include"
 IncludeDir["Glad"] = "Jellybunny/vendor/Glad/include"
 IncludeDir["ImGui"] = "Jellybunny/vendor/imgui"
+IncludeDir["glm"] = "Jellybunny/vendor/glm"
+IncludeDir["stb_image"] = "Jellybunny/vendor/stb_image"
 
 include "Jellybunny/vendor/GLFW"
 include "Jellybunny/vendor/Glad"
 include "Jellybunny/vendor/imgui"
 
 project "Jellybunny"
+
 	location "Jellybunny"
-	kind "SharedLib"
+	kind "StaticLib"
 	language "C++"
+	cppdialect "C++17"
+	staticruntime "on"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -36,9 +45,17 @@ project "Jellybunny"
 	files
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/stb_image/**.h",
+		"%{prj.name}/vendor/stb_image/**.cpp",
+		"%{prj.name}/vendor/glm/glm/**.hpp",
+		"%{prj.name}/vendor/glm/glm/**.inl"
 	}
 
+	defines
+	{
+		"_CRT_SECURE_NO_WARNINGS"
+	}
 
 	includedirs
 	{
@@ -46,7 +63,9 @@ project "Jellybunny"
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.stb_image}"
 	}
 
 	links
@@ -61,13 +80,8 @@ project "Jellybunny"
 	}
 
 	buildoptions{"/utf-8"}
-
-	staticruntime "off"
-	runtime "Debug"
-
+	
 	filter "system:windows"
-		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines
@@ -77,31 +91,28 @@ project "Jellybunny"
 			"GLFW_INCLUDE_NONE"
 		}
 
-		postbuildcommands
-		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox-Test")
-		}
-
 
 	filter "configurations:Debug"
 		defines "JB_DEBUG"
-		buildoptions "/MDd"
-		symbols "On"
+		runtime "Debug"
+		symbols "on"
 
 	filter "configurations:Release"
 		defines "JB_RELEASE"
-		buildoptions "/MD"
-		optimize "On"
+		runtime "Release"
+		optimize "on"
 
 	filter "configurations:Dist"
 		defines "JB_DIST"
-		buildoptions "/MD"
-		optimize "On"
+		runtime "Release"
+		optimize "on"
 
 project "Sandbox-Test"
 	location "Sandbox-Test"
 	kind "ConsoleApp"
 	language "C++"
+	staticruntime "on"
+	cppdialect "C++17"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -115,7 +126,9 @@ project "Sandbox-Test"
 	includedirs
 	{
 		"Jellybunny/vendor/spdlog/include",
-		"Jellybunny/src"
+		"Jellybunny/src",
+		"Jellybunny/vendor",
+		"%{IncludeDir.glm}"
 	}
 
 	links
@@ -126,8 +139,6 @@ project "Sandbox-Test"
 	buildoptions{"/utf-8"}
 
 	filter "system:windows"
-		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines
@@ -137,15 +148,15 @@ project "Sandbox-Test"
 
 	filter "configurations:Debug"
 		defines "JB_DEBUG"
-		buildoptions "/MDd"
-		symbols "On"
+		runtime "Debug"
+		symbols "on"
 
 	filter "configurations:Release"
 		defines "JB_RELEASE"
-		buildoptions "/MD"
-		optimize "On"
+		runtime "Release"
+		optimize "on"
 
 	filter "configurations:Dist"
 		defines "JB_DIST"
-		buildoptions "/MD"
-		optimize "On"
+		runtime "Release"
+		optimize "on"

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Jellybunny/Input.h"
+#include "Jellybunny/Core/Input.h"
 
 namespace Jellybunny
 {
