@@ -27,5 +27,6 @@ namespace Jellybunny
 
 		glm::vec3 m_Position = { 0, 0, 0 };
 		glm::vec3 m_Rotation = { 0, 0, 0 };
+		glm::mat4 m_Trans = glm::mat4(1.0f);
 	};
 }

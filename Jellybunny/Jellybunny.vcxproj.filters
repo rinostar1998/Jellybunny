@@ -1419,6 +1419,8 @@
     <ClInclude Include="vendor\stb_image\stb_image.h">
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
+    <ClInclude Include="src\Jellybunny\Renderer\Renderer2D.h" />
+    <ClInclude Include="src\Jellybunny\Debug\Instrumentality.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Jellybunny\Core\Application.cpp">
@@ -1496,5 +1498,6 @@
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
+    <ClCompile Include="src\Jellybunny\Renderer\Renderer2D.cpp" />
   </ItemGroup>
 </Project>

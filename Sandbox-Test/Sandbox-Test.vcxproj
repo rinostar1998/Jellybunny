@@ -137,12 +137,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Sandbox2D.cpp" />
     <ClCompile Include="src\Sandbox.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Jellybunny\Jellybunny.vcxproj">
       <Project>{F1789B9C-DD30-DDE9-4638-B645320F78DA}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Sandbox2D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

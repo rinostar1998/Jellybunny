@@ -15,6 +15,7 @@
 
 // RENDERER ***********************
 #include "Jellybunny/Renderer/Renderer.h"
+#include "Jellybunny/Renderer/Renderer2D.h"
 #include "Jellybunny/Renderer/RenderCommand.h"
 
 #include "Jellybunny/Renderer/Buffer.h"
@@ -22,8 +23,4 @@
 #include "Jellybunny/Renderer/Texture.h"
 #include "Jellybunny/Renderer/VertexArray.h"
 #include "Jellybunny/Renderer/Camera.h"
-// ********************************
-
-// ENTRY POINT ********************
-#include "Jellybunny/Core/EntryPoint.h"
 // ********************************

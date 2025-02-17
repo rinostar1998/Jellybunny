@@ -1,4 +1,6 @@
 #include <Jellybunny.h>
+#include <Jellybunny/Core/EntryPoint.h>
+
 #include "Platform/OpenGL/OpenGLShader.h"
 
 #include "imgui/imgui.h"
@@ -6,13 +8,15 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
+#include "Sandbox2D.h"
+
 class ExampleLayer : public Jellybunny::Layer
 {
 public:
 	ExampleLayer()
 		: Layer("Example"), m_CameraController(1280.0f / 720.0f), m_TriRot(0.0f)
 	{
-		m_VertexArray.reset(Jellybunny::VertexArray::Create());
+		m_VertexArray = Jellybunny::VertexArray::Create();
 
 		float vertices[3 * 7] = {
 			-0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f,
@@ -20,7 +24,7 @@ public:
 			 0.0f,  0.5f, 0.0f, 1.0f, 1.0f, 1.0f, 1.0f
 		};
 
-		m_VertexBuffer.reset(Jellybunny::VertexBuffer::Create(vertices, sizeof(vertices)));
+		m_VertexBuffer = Jellybunny::VertexBuffer::Create(vertices, sizeof(vertices));
 
 		Jellybunny::BufferLayout layout =
 		{
@@ -32,10 +36,10 @@ public:
 		m_VertexArray->AddVertexBuffer(m_VertexBuffer);
 
 		unsigned int indices[3] = { 0, 1, 2 };
-		m_IndexBuffer.reset(Jellybunny::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
+		m_IndexBuffer = Jellybunny::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t));
 		m_VertexArray->SetIndexBuffer(m_IndexBuffer);
 
-		m_VertexArray2.reset(Jellybunny::VertexArray::Create());
+		m_VertexArray2 = Jellybunny::VertexArray::Create();
 
 		float vertices2[4 * 5] = {
 			-0.75f, -0.75f, 0.0f, 0.0f, 0.0f,
@@ -44,7 +48,7 @@ public:
 			 0.75f,  0.75f, 0.0f, 1.0f, 1.0f
 		};
 
-		m_VertexBuffer2.reset(Jellybunny::VertexBuffer::Create(vertices2, sizeof(vertices2)));
+		m_VertexBuffer2 = Jellybunny::VertexBuffer::Create(vertices2, sizeof(vertices2));
 
 		Jellybunny::BufferLayout layout2 =
 		{
@@ -56,7 +60,7 @@ public:
 		m_VertexArray2->AddVertexBuffer(m_VertexBuffer2);
 
 		unsigned int indices2[6] = { 0, 1, 2, 1, 3, 2 };
-		m_IndexBuffer2.reset(Jellybunny::IndexBuffer::Create(indices2, sizeof(indices2) / sizeof(uint32_t)));
+		m_IndexBuffer2 = Jellybunny::IndexBuffer::Create(indices2, sizeof(indices2) / sizeof(uint32_t));
 		m_VertexArray2->SetIndexBuffer(m_IndexBuffer2);
 
 		std::string vertexSrc = R"(
@@ -221,7 +225,8 @@ class Sandbox : public Jellybunny::Application
 public:
 	Sandbox()
 	{
-		PushLayer(new ExampleLayer());
+		//PushLayer(new ExampleLayer());
+		PushLayer(new Sandbox2D());
 	}
 
 	~Sandbox()

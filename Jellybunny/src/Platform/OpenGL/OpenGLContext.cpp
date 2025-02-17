@@ -14,6 +14,7 @@ namespace Jellybunny
 
 	void OpenGLContext::Init()
 	{
+		JB_PROFILE_FUNCTION();
 		glfwMakeContextCurrent(m_windowHandle);
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 		JB_CORE_ASS(status, "FAILED TO INIT GLAD!");
@@ -27,6 +28,7 @@ namespace Jellybunny
 
 	void OpenGLContext::SwapBuffers()
 	{
+		JB_PROFILE_FUNCTION();
 		glfwSwapBuffers(m_windowHandle);
 	}
 

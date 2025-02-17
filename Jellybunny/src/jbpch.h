@@ -14,6 +14,7 @@
 #include <unordered_set>
 
 #include "Jellybunny/Core/Log.h"
+#include "Jellybunny/Debug/Instrumentality.h"
 
 #ifdef JB_PLATFORM_WINDOWS
 	#include <Windows.h>

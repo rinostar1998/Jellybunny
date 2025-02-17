@@ -30,22 +30,27 @@ namespace Jellybunny
 
 	Application::~Application()
 	{
-
+		JB_PROFILE_FUNCTION();
+		Renderer::Die();
 	}
 
 	void Application::PushLayer(Layer* layer)
 	{
+		JB_PROFILE_FUNCTION();
 		m_LayerStack.PushLayer(layer);
 		layer->OnAttach();
 	}
+
 	void Application::PushOverlay(Layer* layer)
 	{
+		JB_PROFILE_FUNCTION();
 		m_LayerStack.PushOverlay(layer);
 		layer->OnAttach();
 	}
 
 	void Application::OnEvent(Event& e)
 	{
+		JB_PROFILE_FUNCTION();
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClosed));
 		dispatcher.Dispatch<WindowResizeEvent>(BIND_EVENT_FN(OnWindowResize));
@@ -60,24 +65,30 @@ namespace Jellybunny
 
 	void Application::Run()
 	{
+		JB_PROFILE_FUNCTION();
 		while (m_Running)
 		{
+			JB_PROFILE_SCOPE("RUN LOOP");
 			float time = (float)glfwGetTime();
 			Timestep timestep = Timestep(time - m_LastFrame, time);
 			m_LastFrame = time;
 
 			if (!m_Minimized)
 			{
-				for (Layer* layer : m_LayerStack)
-					layer->OnUpdate(timestep);
+				{
+					JB_PROFILE_SCOPE("LAYERSTACK OnUpdate");
+
+					for (Layer* layer : m_LayerStack)
+						layer->OnUpdate(timestep);
+				}
+				m_ImGuiLayer->Begin();
+				{
+					JB_PROFILE_SCOPE("LAYERSTACK OnImGuiRender");
+					for (Layer* layer : m_LayerStack)
+						layer->OnImGuiRender();
+				}
+				m_ImGuiLayer->End();
 			}
-
-			m_ImGuiLayer->Begin();
-			for (Layer* layer : m_LayerStack)
-				layer->OnImGuiRender();
-			m_ImGuiLayer->End();
-
-			auto [x, y] = Input::GetMousePosition();
 
 			m_Window->OnUpdate();
 		}
@@ -91,6 +102,7 @@ namespace Jellybunny
 
 	bool Application::OnWindowResize(WindowResizeEvent& e)
 	{
+		JB_PROFILE_FUNCTION();
 		if (e.GetWidth() == 0 || e.GetHeight() == 0) { m_Minimized = true;  return false; }
 		m_Minimized = false;
 		Renderer::OnWindowResize(e.GetWidth(), e.GetHeight());

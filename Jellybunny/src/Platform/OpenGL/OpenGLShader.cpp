@@ -21,6 +21,7 @@ namespace Jellybunny
 
 	OpenGLShader::OpenGLShader(const std::string& filePath)
 	{
+		JB_PROFILE_FUNCTION();
 		std::string source = ReadFile(filePath);
 		auto shaderSources = PreProcess(source);
 		Compile(shaderSources);
@@ -32,6 +33,7 @@ namespace Jellybunny
 
 	OpenGLShader::OpenGLShader(const std::string& name, const std::string& vertSource, const std::string& fragSource) : m_Name(name)
 	{
+		JB_PROFILE_FUNCTION();
 		std::unordered_map<GLenum, std::string> sources;
 		sources[GL_VERTEX_SHADER] = vertSource;
 		sources[GL_FRAGMENT_SHADER] = fragSource;
@@ -40,11 +42,13 @@ namespace Jellybunny
 
 	OpenGLShader::~OpenGLShader()
 	{
+		JB_PROFILE_FUNCTION();
 		glDeleteProgram(m_RendererID);
 	}
 
 	std::string OpenGLShader::ReadFile(const std::string& filePath)
 	{
+		JB_PROFILE_FUNCTION();
 		std::string result;
 		std::ifstream in(filePath, std::ios::in | std::ios::binary);
 		if (in)
@@ -64,6 +68,7 @@ namespace Jellybunny
 
 	std::unordered_map<GLenum, std::string> OpenGLShader::PreProcess(const std::string& source)
 	{
+		JB_PROFILE_FUNCTION();
 		std::unordered_map<GLenum, std::string> sources;
 
 		const char* typeToken = "#type";
@@ -86,6 +91,7 @@ namespace Jellybunny
 
 	void OpenGLShader::Compile(const std::unordered_map<GLenum, std::string>& shaderSources)
 	{
+		JB_PROFILE_FUNCTION();
 		GLuint program = glCreateProgram();
 		JB_CORE_ASS(shaderSources.size() <= 2, "WHY THE FUCK DO YOU NEED MORE THAN 2 SHADERS!??? NO, I'M NOT GONNA ALLOCATE THAT!!");
 		std::array<GLenum, 2> glShaderIds;
@@ -156,12 +162,104 @@ namespace Jellybunny
 
 	void OpenGLShader::Bind() const
 	{
+		JB_PROFILE_FUNCTION();
 		glUseProgram(m_RendererID);
 	}
 
 	void OpenGLShader::Unbind() const
 	{
+		JB_PROFILE_FUNCTION();
 		glUseProgram(0);
+	}
+
+	void OpenGLShader::SetMat2(const std::string& name, const glm::mat2& matrix)
+	{
+		JB_PROFILE_FUNCTION();
+		UploadUniformMat2(name, matrix);
+	}
+
+	void OpenGLShader::SetMat3(const std::string& name, const glm::mat3& matrix)
+	{
+		JB_PROFILE_FUNCTION();
+		UploadUniformMat3(name, matrix);
+	}
+
+	void OpenGLShader::SetMat4(const std::string& name, const glm::mat4& matrix)
+	{
+		JB_PROFILE_FUNCTION();
+		UploadUniformMat4(name, matrix);
+	}
+
+	void OpenGLShader::SetFloat2(const std::string& name, const glm::vec2& value)
+	{
+		JB_PROFILE_FUNCTION();
+		UploadUniformFloat2(name, value);
+	}
+
+	void OpenGLShader::SetFloat3(const std::string& name, const glm::vec3& value)
+	{
+		JB_PROFILE_FUNCTION();
+		UploadUniformFloat3(name, value);
+	}
+
+	void OpenGLShader::SetFloat4(const std::string& name, const glm::vec4& value)
+	{
+		JB_PROFILE_FUNCTION();
+		UploadUniformFloat4(name, value);
+	}
+
+	void OpenGLShader::SetInt2(const std::string& name, const glm::ivec2& value)
+	{
+		JB_PROFILE_FUNCTION();
+		UploadUniformInt2(name, value);
+	}
+
+	void OpenGLShader::SetInt3(const std::string& name, const glm::ivec3& value)
+	{
+		JB_PROFILE_FUNCTION();
+		UploadUniformInt3(name, value);
+	}
+
+	void OpenGLShader::SetInt4(const std::string& name, const glm::ivec4& value)
+	{
+		JB_PROFILE_FUNCTION();
+		UploadUniformInt4(name, value);
+	}
+
+	void OpenGLShader::SetInt(const std::string& name, const int value)
+	{
+		JB_PROFILE_FUNCTION();
+		UploadUniformInt(name, value);
+	}
+
+	void OpenGLShader::SetFloat(const std::string& name, const float value)
+	{
+		JB_PROFILE_FUNCTION();
+		UploadUniformFloat(name, value);
+	}
+
+	void OpenGLShader::SetBool(const std::string& name, const bool value)
+	{
+		JB_PROFILE_FUNCTION();
+		UploadUniformBool(name, value);
+	}
+
+	void OpenGLShader::SetIntArray(const std::string& name, const int* values, uint32_t count)
+	{
+		JB_PROFILE_FUNCTION();
+		UploadUniformIntArray(name, values, count);
+	}
+
+	void OpenGLShader::SetFloatArray(const std::string& name, const float* values, uint32_t count)
+	{
+		JB_PROFILE_FUNCTION();
+		UploadUniformFloatArray(name, values, count);
+	}
+
+	void OpenGLShader::SetBoolArray(const std::string& name, const bool* values, uint32_t count)
+	{
+		JB_PROFILE_FUNCTION();
+		UploadUniformBoolArray(name, values, count);
 	}
 
 	void OpenGLShader::UploadUniformInt(const std::string& name, const int value)
@@ -170,19 +268,19 @@ namespace Jellybunny
 		glUniform1i(location, value);
 	}
 
-	void OpenGLShader::UploadUniformInt2(const std::string& name, const glm::vec2& vector)
+	void OpenGLShader::UploadUniformInt2(const std::string& name, const glm::ivec2& vector)
 	{
 		GLint location = glGetUniformLocation(m_RendererID, name.c_str());
 		glUniform2i(location, vector.x, vector.y);
 	}
 
-	void OpenGLShader::UploadUniformInt3(const std::string& name, const glm::vec3& vector)
+	void OpenGLShader::UploadUniformInt3(const std::string& name, const glm::ivec3& vector)
 	{
 		GLint location = glGetUniformLocation(m_RendererID, name.c_str());
 		glUniform3i(location, vector.x, vector.y, vector.z);
 	}
 
-	void OpenGLShader::UploadUniformInt4(const std::string& name, const glm::vec4& vector)
+	void OpenGLShader::UploadUniformInt4(const std::string& name, const glm::ivec4& vector)
 	{
 		GLint location = glGetUniformLocation(m_RendererID, name.c_str());
 		glUniform4i(location, vector.x, vector.y, vector.z, vector.w);
@@ -228,6 +326,30 @@ namespace Jellybunny
 	{
 		GLint location = glGetUniformLocation(m_RendererID, name.c_str());
 		glUniformMatrix4fv(location, 1, GL_FALSE, glm::value_ptr(matrix));
+	}
+
+	void OpenGLShader::UploadUniformBool(const std::string& name, const bool value)
+	{
+		GLint location = glGetUniformLocation(m_RendererID, name.c_str());
+		glUniform1i(location, value);
+	}
+
+	void OpenGLShader::UploadUniformIntArray(const std::string& name, const int* values, uint32_t count)
+	{
+		GLint location = glGetUniformLocation(m_RendererID, name.c_str());
+		glUniform1iv(location, count, values);
+	}
+
+	void OpenGLShader::UploadUniformFloatArray(const std::string& name, const float* values, uint32_t count)
+	{
+		GLint location = glGetUniformLocation(m_RendererID, name.c_str());
+		glUniform1fv(location, count, values);
+	}
+
+	void OpenGLShader::UploadUniformBoolArray(const std::string& name, const bool* values, uint32_t count)
+	{
+		GLint location = glGetUniformLocation(m_RendererID, name.c_str());
+		glUniform1iv(location, count, (int*)values);
 	}
 
 }

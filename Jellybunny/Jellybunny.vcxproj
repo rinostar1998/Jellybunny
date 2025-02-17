@@ -146,6 +146,8 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Jellybunny\Debug\Instrumentality.h" />
+    <ClInclude Include="src\Jellybunny\Renderer\Renderer2D.h" />
     <ClInclude Include="src\Jellybunny.h" />
     <ClInclude Include="src\Jellybunny\Core\Application.h" />
     <ClInclude Include="src\Jellybunny\Core\Core.h" />
@@ -603,6 +605,7 @@
     <ClInclude Include="vendor\stb_image\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Jellybunny\Renderer\Renderer2D.cpp" />
     <ClCompile Include="src\Jellybunny\Core\Application.cpp" />
     <ClCompile Include="src\Jellybunny\Core\Layer.cpp" />
     <ClCompile Include="src\Jellybunny\Core\LayerStack.cpp" />
