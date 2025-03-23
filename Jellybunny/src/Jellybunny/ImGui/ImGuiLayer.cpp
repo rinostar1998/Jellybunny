@@ -11,6 +11,8 @@
 #include <GLFW/glfw3.h>
 #include <glad/glad.h>
 
+#include "ImGuizmo.h"
+
 
 namespace Jellybunny {
 
@@ -24,6 +26,16 @@ namespace Jellybunny {
 
 	}
 
+	void ImGuiLayer::OnEvent(Event& e)
+	{
+		if (m_BlockEvents)
+		{
+			ImGuiIO& io = ImGui::GetIO();
+			e.Handled |= e.IsInCategory(EventCategoryMouse) & io.WantCaptureMouse;
+			e.Handled |= e.IsInCategory(EventCategoryKeyboard) & io.WantCaptureKeyboard;
+		}
+	}
+
 	void ImGuiLayer::OnAttach()
 	{
 		JB_PROFILE_FUNCTION();
@@ -34,6 +46,9 @@ namespace Jellybunny {
 		io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
 		io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;
 
+		io.Fonts->AddFontFromFileTTF("assets/fonts/inconsolata/Inconsolata-Bold.ttf", 14.0f);
+		io.FontDefault =  io.Fonts->AddFontFromFileTTF("assets/fonts/inconsolata/Inconsolata-Regular.ttf", 14.0f);
+
 		ImGui::StyleColorsDark();
 
 		ImGuiStyle& style = ImGui::GetStyle();
@@ -43,6 +58,7 @@ namespace Jellybunny {
 			style.Colors[ImGuiCol_WindowBg].w = 1.0f;
 		}
 
+		SetDarkThemeColors();
 		Application& app = Application::Get();
 		GLFWwindow* window = static_cast<GLFWwindow*>(app.GetWindow().GetNativeWindow());
 
@@ -64,6 +80,7 @@ namespace Jellybunny {
 		ImGui_ImplOpenGL3_NewFrame();
 		ImGui_ImplGlfw_NewFrame();
 		ImGui::NewFrame();
+		ImGuizmo::BeginFrame();
 	}
 
 	void ImGuiLayer::End()
@@ -85,4 +102,25 @@ namespace Jellybunny {
 		}
 	}
 
+	void ImGuiLayer::SetDarkThemeColors()
+	{
+		auto& colors = ImGui::GetStyle().Colors;
+		colors[ImGuiCol_WindowBg] = ImVec4{ 0.02f, 0.01f, 0.02f, 1.0f };
+
+		colors[ImGuiCol_Header] = ImVec4{ 0.2f, 0.01f, 0.02f, 1.0f };
+		colors[ImGuiCol_HeaderHovered] = ImVec4{ 0.4f, 0.08f, 0.1f, 1.0f };
+
+		colors[ImGuiCol_Button] = ImVec4{ 0.08f, 0.08f, 0.2f, 1.0f };
+		colors[ImGuiCol_ButtonHovered] = ImVec4{ 0.1f, 0.12f, 0.4f, 1.0f };
+
+		colors[ImGuiCol_Tab] = ImVec4{ 0.1f, 0.1f, 0.1f, 1.0f };
+		colors[ImGuiCol_TabHovered] = ImVec4{ 0.2f, 0.0f, 0.0f, 1.0f };
+		colors[ImGuiCol_TabActive] = ImVec4{ 0.5f, 0.08f, 0.0f, 1.0f };
+		colors[ImGuiCol_TabUnfocused] = ImVec4{ 0.0f, 0.0f, 0.0f, 1.0f };
+		colors[ImGuiCol_TabUnfocusedActive] = ImVec4{ 0.2f, 0.0f, 0.04f, 1.0f };
+
+		colors[ImGuiCol_TitleBg] = ImVec4{ 0.05f, 0.0f, 0.0f, 1.0f };
+		colors[ImGuiCol_TitleBgActive] = ImVec4{ 0.3f, 0.05f, 0.02f, 1.0f };
+		colors[ImGuiCol_TitleBgCollapsed] = ImVec4{ 0.0f, 0.0f, 0.1f, 1.0f };
+	}
 }

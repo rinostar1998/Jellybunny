@@ -11,3 +11,18 @@
 [submodule "Jellybunny/vendor/glm"]
 	path = Jellybunny/vendor/glm
 	url = https://github.com/g-truc/glm
+[submodule "Jellybunny/vendor/yaml-cpp"]
+	path = Jellybunny/vendor/yaml-cpp
+	url = https://github.com/TheCherno/yaml-cpp
+[submodule "Jellybunny/vendor/ImGuizmo"]
+	path = Jellybunny/vendor/ImGuizmo
+	url = https://github.com/TheCherno/ImGuizmo
+[submodule "Jellybunny/vendor/SPIRV-Tools"]
+	path = Jellybunny/vendor/SPIRV-Tools
+	url = https://github.com/KhronosGroup/SPIRV-Tools
+[submodule "Jellybunny/vendor/shaderc"]
+	path = Jellybunny/vendor/shaderc
+	url = https://github.com/google/shaderc
+[submodule "Jellybunny/vendor/Box2D"]
+	path = Jellybunny/vendor/Box2D
+	url = https://github.com/rinostar1998/box2d

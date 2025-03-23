@@ -10,14 +10,26 @@
     <Filter Include="src\Jellybunny\Core">
       <UniqueIdentifier>{000393F0-6C64-70FE-F5D1-B6B06132A7BD}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Jellybunny\Debug">
+      <UniqueIdentifier>{1EBEFF02-0A4D-89CC-B36B-9DC79FD99972}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Jellybunny\Event">
       <UniqueIdentifier>{F9341B03-E5C3-A4CC-8EE2-B8C77A50B572}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\Jellybunny\ImGui">
       <UniqueIdentifier>{D2285E03-BEB7-E7CC-67D6-FBC75344F872}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Jellybunny\Meth">
+      <UniqueIdentifier>{855498F0-F1B5-75FE-7A23-BCB0E683ACBD}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Jellybunny\Renderer">
       <UniqueIdentifier>{4E364405-BA6D-8C9C-C377-F0BF2F2EB395}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Jellybunny\Scene">
+      <UniqueIdentifier>{C5200E04-B1AF-97CD-5ACE-ABC8463CA873}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Jellybunny\Utils">
+      <UniqueIdentifier>{08B53B04-F443-C5CD-9D62-D9C889D0D573}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\Platform">
       <UniqueIdentifier>{21CA02E5-0D2D-9289-B6B2-CA3FA2F45D0C}</UniqueIdentifier>
@@ -30,6 +42,9 @@
     </Filter>
     <Filter Include="vendor">
       <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\ImGuizmo">
+      <UniqueIdentifier>{73BF7F4C-DF4A-ED10-E85B-700554664911}</UniqueIdentifier>
     </Filter>
     <Filter Include="vendor\glm">
       <UniqueIdentifier>{829FC5A8-6E57-07F6-D75E-E051C335A2E6}</UniqueIdentifier>
@@ -84,11 +99,26 @@
     <ClInclude Include="src\Jellybunny\Core\MouseButtonCodes.h">
       <Filter>src\Jellybunny\Core</Filter>
     </ClInclude>
+    <ClInclude Include="src\Jellybunny\Core\MouseCodes.h">
+      <Filter>src\Jellybunny\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Jellybunny\Core\PlatformDetection.h">
+      <Filter>src\Jellybunny\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Jellybunny\Core\Timer.h">
+      <Filter>src\Jellybunny\Core</Filter>
+    </ClInclude>
     <ClInclude Include="src\Jellybunny\Core\Timestep.h">
+      <Filter>src\Jellybunny\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Jellybunny\Core\UUID.h">
       <Filter>src\Jellybunny\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Jellybunny\Core\Window.h">
       <Filter>src\Jellybunny\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Jellybunny\Debug\Instrumentality.h">
+      <Filter>src\Jellybunny\Debug</Filter>
     </ClInclude>
     <ClInclude Include="src\Jellybunny\Event\ApplicationEvent.h">
       <Filter>src\Jellybunny\Event</Filter>
@@ -105,6 +135,9 @@
     <ClInclude Include="src\Jellybunny\ImGui\ImGuiLayer.h">
       <Filter>src\Jellybunny\ImGui</Filter>
     </ClInclude>
+    <ClInclude Include="src\Jellybunny\Meth\Math.h">
+      <Filter>src\Jellybunny\Meth</Filter>
+    </ClInclude>
     <ClInclude Include="src\Jellybunny\Renderer\Buffer.h">
       <Filter>src\Jellybunny\Renderer</Filter>
     </ClInclude>
@@ -114,7 +147,16 @@
     <ClInclude Include="src\Jellybunny\Renderer\CameraController.h">
       <Filter>src\Jellybunny\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\Jellybunny\Renderer\EditorCamera.h">
+      <Filter>src\Jellybunny\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Jellybunny\Renderer\Framebuffer.h">
+      <Filter>src\Jellybunny\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\Jellybunny\Renderer\GraphicsContext.h">
+      <Filter>src\Jellybunny\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Jellybunny\Renderer\OrthographicCamera.h">
       <Filter>src\Jellybunny\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Jellybunny\Renderer\RenderCommand.h">
@@ -123,22 +165,55 @@
     <ClInclude Include="src\Jellybunny\Renderer\Renderer.h">
       <Filter>src\Jellybunny\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\Jellybunny\Renderer\Renderer2D.h">
+      <Filter>src\Jellybunny\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\Jellybunny\Renderer\RendererAPI.h">
       <Filter>src\Jellybunny\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Jellybunny\Renderer\Shader.h">
       <Filter>src\Jellybunny\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\Jellybunny\Renderer\SubTexture2D.h">
+      <Filter>src\Jellybunny\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\Jellybunny\Renderer\Texture.h">
+      <Filter>src\Jellybunny\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Jellybunny\Renderer\UniformBuffer.h">
       <Filter>src\Jellybunny\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Jellybunny\Renderer\VertexArray.h">
       <Filter>src\Jellybunny\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\Jellybunny\Scene\Components.h">
+      <Filter>src\Jellybunny\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Jellybunny\Scene\Entity.h">
+      <Filter>src\Jellybunny\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Jellybunny\Scene\Scene.h">
+      <Filter>src\Jellybunny\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Jellybunny\Scene\SceneCamera.h">
+      <Filter>src\Jellybunny\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Jellybunny\Scene\SceneSerializer.h">
+      <Filter>src\Jellybunny\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Jellybunny\Scene\ScriptableEntity.h">
+      <Filter>src\Jellybunny\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Jellybunny\Utils\PlatformUtils.h">
+      <Filter>src\Jellybunny\Utils</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h">
       <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLFramebuffer.h">
       <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h">
@@ -150,17 +225,20 @@
     <ClInclude Include="src\Platform\OpenGL\OpenGLTexture.h">
       <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
-    <ClInclude Include="src\Platform\OpenGL\OpenGLVertexArray.h">
+    <ClInclude Include="src\Platform\OpenGL\OpenGLUniformBuffer.h">
       <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
-    <ClInclude Include="src\Platform\Windows\WindowsInput.h">
-      <Filter>src\Platform\Windows</Filter>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLVertexArray.h">
+      <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>src\Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\jbpch.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\ImGuizmo\ImGuizmo.h">
+      <Filter>vendor\ImGuizmo</Filter>
     </ClInclude>
     <ClInclude Include="vendor\glm\glm\common.hpp">
       <Filter>vendor\glm\glm</Filter>
@@ -1419,8 +1497,6 @@
     <ClInclude Include="vendor\stb_image\stb_image.h">
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
-    <ClInclude Include="src\Jellybunny\Renderer\Renderer2D.h" />
-    <ClInclude Include="src\Jellybunny\Debug\Instrumentality.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Jellybunny\Core\Application.cpp">
@@ -1435,19 +1511,31 @@
     <ClCompile Include="src\Jellybunny\Core\Log.cpp">
       <Filter>src\Jellybunny\Core</Filter>
     </ClCompile>
+    <ClCompile Include="src\Jellybunny\Core\UUID.cpp">
+      <Filter>src\Jellybunny\Core</Filter>
+    </ClCompile>
     <ClCompile Include="src\Jellybunny\ImGui\ImGuiBuild.cpp">
       <Filter>src\Jellybunny\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\Jellybunny\ImGui\ImGuiLayer.cpp">
       <Filter>src\Jellybunny\ImGui</Filter>
     </ClCompile>
+    <ClCompile Include="src\Jellybunny\Meth\Math.cpp">
+      <Filter>src\Jellybunny\Meth</Filter>
+    </ClCompile>
     <ClCompile Include="src\Jellybunny\Renderer\Buffer.cpp">
       <Filter>src\Jellybunny\Renderer</Filter>
     </ClCompile>
-    <ClCompile Include="src\Jellybunny\Renderer\Camera.cpp">
+    <ClCompile Include="src\Jellybunny\Renderer\CameraController.cpp">
       <Filter>src\Jellybunny\Renderer</Filter>
     </ClCompile>
-    <ClCompile Include="src\Jellybunny\Renderer\CameraController.cpp">
+    <ClCompile Include="src\Jellybunny\Renderer\EditorCamera.cpp">
+      <Filter>src\Jellybunny\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Jellybunny\Renderer\Framebuffer.cpp">
+      <Filter>src\Jellybunny\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Jellybunny\Renderer\OrthographicCamera.cpp">
       <Filter>src\Jellybunny\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Jellybunny\Renderer\RenderCommand.cpp">
@@ -1456,22 +1544,46 @@
     <ClCompile Include="src\Jellybunny\Renderer\Renderer.cpp">
       <Filter>src\Jellybunny\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\Jellybunny\Renderer\Renderer2D.cpp">
+      <Filter>src\Jellybunny\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\Jellybunny\Renderer\RendererAPI.cpp">
       <Filter>src\Jellybunny\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Jellybunny\Renderer\Shader.cpp">
       <Filter>src\Jellybunny\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\Jellybunny\Renderer\SubTexture2D.cpp">
+      <Filter>src\Jellybunny\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\Jellybunny\Renderer\Texture.cpp">
+      <Filter>src\Jellybunny\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Jellybunny\Renderer\UniformBuffer.cpp">
       <Filter>src\Jellybunny\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Jellybunny\Renderer\VertexArray.cpp">
       <Filter>src\Jellybunny\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\Jellybunny\Scene\Entity.cpp">
+      <Filter>src\Jellybunny\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Jellybunny\Scene\Scene.cpp">
+      <Filter>src\Jellybunny\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Jellybunny\Scene\SceneCamera.cpp">
+      <Filter>src\Jellybunny\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Jellybunny\Scene\SceneSerializer.cpp">
+      <Filter>src\Jellybunny\Scene</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp">
       <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLFramebuffer.cpp">
       <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLRendererAPI.cpp">
@@ -1483,10 +1595,16 @@
     <ClCompile Include="src\Platform\OpenGL\OpenGLTexture.cpp">
       <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLUniformBuffer.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLVertexArray.cpp">
       <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
+      <Filter>src\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsPlatformUtils.cpp">
       <Filter>src\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
@@ -1495,9 +1613,11 @@
     <ClCompile Include="src\jbpch.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="vendor\ImGuizmo\ImGuizmo.cpp">
+      <Filter>vendor\ImGuizmo</Filter>
+    </ClCompile>
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
-    <ClCompile Include="src\Jellybunny\Renderer\Renderer2D.cpp" />
   </ItemGroup>
 </Project>

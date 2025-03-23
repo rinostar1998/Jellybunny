@@ -15,29 +15,37 @@ namespace Jellybunny
 	void OrthographicCameraController::OnUpdate(Timestep time)
 	{
 		JB_PROFILE_FUNCTION();
-		if (Input::IsKeyPressed(JB_KEY_A))
+		if (Input::IsKeyPressed(KeyCode::A))
 		{
 			m_CamPos.x -= cos(glm::radians(m_CamRot.z)) *  m_CamSpeed * time.DeltaTime();
 			m_CamPos.y -= sin(glm::radians(m_CamRot.z)) *  m_CamSpeed * time.DeltaTime();
 		}
-		if (Input::IsKeyPressed(JB_KEY_D))
+		if (Input::IsKeyPressed(KeyCode::D))
 		{
 			m_CamPos.x += cos(glm::radians(m_CamRot.z)) * m_CamSpeed * time.DeltaTime();
 			m_CamPos.y += sin(glm::radians(m_CamRot.z)) * m_CamSpeed * time.DeltaTime();
 		}
-		if (Input::IsKeyPressed(JB_KEY_W))
+		if (Input::IsKeyPressed(KeyCode::W))
 		{
 			m_CamPos.x -= sin(glm::radians(m_CamRot.z)) * m_CamSpeed * time.DeltaTime();
 			m_CamPos.y += cos(glm::radians(m_CamRot.z)) * m_CamSpeed * time.DeltaTime();
 		}
-		if (Input::IsKeyPressed(JB_KEY_S))
+		if (Input::IsKeyPressed(KeyCode::S))
 		{
 			m_CamPos.x += sin(glm::radians(m_CamRot.z)) * m_CamSpeed * time.DeltaTime();
 			m_CamPos.y -= cos(glm::radians(m_CamRot.z)) * m_CamSpeed * time.DeltaTime();
 		}
 
-		auto [x, y] = Input::GetMousePosition();
-		m_CamRot.z = x * 0.1f;
+		if (m_Rotate)
+		{
+			auto [x, y] = Input::GetMousePosition();
+			m_CamRot.z = (x - m_Width / 2) * 0.1f;
+		}
+
+
+		m_CamSpeed = std::sqrt(m_Zoom);
+		m_Camera.SetPosition(m_CamPos);
+		m_Camera.SetRotation(m_CamRot);
 
 		m_CamRot.x = (m_CamRot.x > 360.0f ? m_CamRot.x - 360.0f : m_CamRot.x);
 		m_CamRot.x = (m_CamRot.x < 0.0f ? m_CamRot.x + 360.0f : m_CamRot.x);
@@ -45,10 +53,6 @@ namespace Jellybunny
 		m_CamRot.y = (m_CamRot.y < 0.0f ? m_CamRot.y + 360.0f : m_CamRot.y);
 		m_CamRot.z = (m_CamRot.z > 360.0f ? m_CamRot.z - 360.0f : m_CamRot.z);
 		m_CamRot.z = (m_CamRot.z < 0.0f ? m_CamRot.z + 360.0f : m_CamRot.z);
-
-		m_CamSpeed = std::sqrt(m_Zoom);
-		m_Camera.SetPosition(m_CamPos);
-		m_Camera.SetRotation(m_CamRot);
 	}
 
 	void OrthographicCameraController::OnEvent(Event& e)
@@ -59,20 +63,31 @@ namespace Jellybunny
 		dispatcher.Dispatch<WindowResizeEvent>(JB_BIND_EVENT_FN(OrthographicCameraController::OnWindowResized));
 	}
 
+	void OrthographicCameraController::OnResize(float width, float height)
+	{
+		m_aspectRatio = width / height;
+		m_Width = height;
+		CalculateView();
+	}
+
+	void OrthographicCameraController::CalculateView()
+	{
+		m_Camera.SetProjection(-m_aspectRatio * m_Zoom, m_aspectRatio * m_Zoom, -m_Zoom, m_Zoom);
+	}
+
 	bool OrthographicCameraController::OnMouseScrolled(MouseScrolledEvent& e)
 	{
 		JB_PROFILE_FUNCTION();
 		m_Zoom -= e.GetYOffset() * 0.25f;
 		m_Zoom = m_Zoom >= 0.25f ? m_Zoom : 0.25f;
-		m_Camera.SetProjection(-m_aspectRatio * m_Zoom, m_aspectRatio * m_Zoom, -m_Zoom, m_Zoom);
+		CalculateView();
 		return false;
 	}
 
 	bool OrthographicCameraController::OnWindowResized(WindowResizeEvent& e)
 	{
 		JB_PROFILE_FUNCTION();
-		m_aspectRatio = (float)e.GetWidth() / (float)e.GetHeight();
-		m_Camera.SetProjection(-m_aspectRatio * m_Zoom, m_aspectRatio * m_Zoom, -m_Zoom, m_Zoom);
+		OnResize((float)e.GetWidth(), (float)e.GetHeight());
 		return false;
 	}
 

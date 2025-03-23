@@ -1,26 +1,30 @@
 #include "jbpch.h"
-#include "Application.h"
+#include "Jellybunny/Core/Application.h"
 
 #include "Jellybunny/Core/Log.h"
 
 #include "Jellybunny/Renderer/Renderer.h"
 
-#include "Input.h"
+#include "Jellybunny/Core/Input.h"
+#include <filesystem>
 #include <glfw/glfw3.h>
 
 namespace Jellybunny
 {
 
-#define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
-
 	Application* Application::s_Instance = nullptr;
 
-	Application::Application()
+	Application::Application(const ApplicationSpecification& specification) : m_Specification(specification)
 	{
-		JB_CORE_ASS(s_Instance, "APPLICATION ALREADY EXISTS!");
+		JB_PROFILE_FUNCTION();
+		JB_CORE_ASS(!s_Instance, "APPLICATION ALREADY EXISTS!");
 		s_Instance = this;
-		m_Window = std::unique_ptr<Window>(Window::Create());
-		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
+
+		// Create working dir here
+		if(!m_Specification.workingDirectory.empty()) std::filesystem::current_path(m_Specification.workingDirectory);
+
+		m_Window = Window::Create(WindowProps(m_Specification.name));
+		m_Window->SetEventCallback(JB_BIND_EVENT_FN(Application::OnEvent));
 
 		Renderer::Init();
 
@@ -52,8 +56,8 @@ namespace Jellybunny
 	{
 		JB_PROFILE_FUNCTION();
 		EventDispatcher dispatcher(e);
-		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClosed));
-		dispatcher.Dispatch<WindowResizeEvent>(BIND_EVENT_FN(OnWindowResize));
+		dispatcher.Dispatch<WindowCloseEvent>(JB_BIND_EVENT_FN(OnWindowClosed));
+		dispatcher.Dispatch<WindowResizeEvent>(JB_BIND_EVENT_FN(OnWindowResize));
 
 		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin(); )
 		{
@@ -92,6 +96,11 @@ namespace Jellybunny
 
 			m_Window->OnUpdate();
 		}
+	}
+
+	void Application::Die()
+	{
+		m_Running = false;
 	}
 
 	bool Application::OnWindowClosed(WindowCloseEvent& e)

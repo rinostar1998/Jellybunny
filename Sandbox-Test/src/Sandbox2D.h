@@ -23,5 +23,10 @@ private:
 	Jellybunny::Ref<Jellybunny::IndexBuffer> m_IndexBuffer;
 	Jellybunny::Ref<Jellybunny::Texture2D> m_Texture;
 
+	Jellybunny::Ref<Jellybunny::Texture2D> m_SpriteSheet;
+	Jellybunny::Ref<Jellybunny::SubTexture2D> m_TextureSub;
+
 	glm::vec4 m_Color = { 1.0f, 1.0f, 0.0f, 1.0f };
+	uint32_t m_MapWidth, m_MapHeight;
+	std::unordered_map<char, Jellybunny::Ref<Jellybunny::SubTexture2D>> s_TextureMap;
 };

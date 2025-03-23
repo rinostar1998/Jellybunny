@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..">
+      <UniqueIdentifier>{61705900-4DFC-870B-B6AA-880BA255880B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Jellybunny">
+      <UniqueIdentifier>{5CB2BC5E-C872-3895-91AD-8112FD2C7D71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Jellybunny\vendor">
+      <UniqueIdentifier>{39897CDD-2518-06A7-CE36-1AA2BAA4164D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Jellybunny\vendor\Box2D">
+      <UniqueIdentifier>{077A428B-F389-EE5B-5C43-537A4872DDF4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Jellybunny\vendor\GLFW">
+      <UniqueIdentifier>{18F02AC6-84B2-5E50-CD62-EDDC3964372E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Jellybunny\vendor\Glad">
+      <UniqueIdentifier>{C07B2BC6-2C3E-5F50-75EE-EDDCE1EF372E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Jellybunny\vendor\imgui">
+      <UniqueIdentifier>{63DD028E-4FED-AE5E-B8A6-137DA4D59DF7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Jellybunny\vendor\yaml-cpp">
+      <UniqueIdentifier>{0B60C795-7778-AEBF-4025-3E59ACFC4259}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Jellybunny-Director">
+      <UniqueIdentifier>{4576385E-3170-61B0-1ADD-F7C00676C71C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Sandbox-Test">
+      <UniqueIdentifier>{0C7623B9-7801-917D-8112-1472ED1CED7D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Jellybunny-Director\premake5.lua">
+      <Filter>..\Jellybunny-Director</Filter>
+    </None>
+    <None Include="..\..\Jellybunny\premake5.lua">
+      <Filter>..\Jellybunny</Filter>
+    </None>
+    <None Include="..\..\Jellybunny\vendor\Box2D\premake5.lua">
+      <Filter>..\Jellybunny\vendor\Box2D</Filter>
+    </None>
+    <None Include="..\..\Jellybunny\vendor\GLFW\premake5.lua">
+      <Filter>..\Jellybunny\vendor\GLFW</Filter>
+    </None>
+    <None Include="..\..\Jellybunny\vendor\Glad\premake5.lua">
+      <Filter>..\Jellybunny\vendor\Glad</Filter>
+    </None>
+    <None Include="..\..\Jellybunny\vendor\imgui\premake5.lua">
+      <Filter>..\Jellybunny\vendor\imgui</Filter>
+    </None>
+    <None Include="..\..\Jellybunny\vendor\yaml-cpp\premake5.lua">
+      <Filter>..\Jellybunny\vendor\yaml-cpp</Filter>
+    </None>
+    <None Include="..\..\Sandbox-Test\premake5.lua">
+      <Filter>..\Sandbox-Test</Filter>
+    </None>
+    <None Include="..\..\premake5.lua">
+      <Filter>..</Filter>
+    </None>
+    <None Include="premake5.lua" />
+  </ItemGroup>
+</Project>

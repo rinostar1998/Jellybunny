@@ -1,0 +1,317 @@
+************************************* Invoked: Fri Mar 7 17:14:38 2025
+[0] Arguments: C:\dev\Jellybunny\VulkanSDK-1.2.170.0-Installer.exe
+[4] Operations sanity check succeeded.
+[4] Language: en-US
+[227] Loaded control script ":/metadata/installer-config/installscript_qs.qs"
+[227] Using control script: ":/metadata/installer-config/installscript_qs.qs"
+[1257] Preparing meta information download...
+[1993] Retrieving meta information from remote repository...
+[2492] Extracting meta information...
+[17730] Installation space required: "2.65 GB" Temporary space required: "557.75 MB" Local repository size: "0.00 bytes"
+[17746] Tmp and install directories are on the same volume. Volume mount point: "C:\\" Free space available: "13.62 GB"
+[18529] backup  operation: Mkdir
+[18529] 	- arguments: C:/dev/Jellybunny/Jellybunny/vendor/VulkanSDK
+[18529] Done
+[18529] perform  operation: Mkdir
+[18529] 	- arguments: C:/dev/Jellybunny/Jellybunny/vendor/VulkanSDK
+[18529] Done
+[18530] Preparing the installation...
+[18530] Install size: 5 components
+[18530] Downloading packages...
+[18530] Downloading archive "1.4.304.1debug.7z.sha1" for component Shader Toolchain Debug Symbols - 64-bit.
+[19237] Downloading archive "1.4.304.1debug.7z" for component Shader Toolchain Debug Symbols - 64-bit.
+[45201] Downloading archive "1.4.304.1Volk.7z.sha1" for component Volk header, source, and library..
+[45909] Downloading archive "1.4.304.1Volk.7z" for component Volk header, source, and library..
+[47122] Downloading archive "1.4.304.1VMA.7z.sha1" for component Vulkan Memory Allocator header..
+[47810] Downloading archive "1.4.304.1VMA.7z" for component Vulkan Memory Allocator header..
+[48944] Installing component The Vulkan SDK
+[48945] backup com.lunarg.vulkan operation: License
+[48945] 	- arguments:
+[48945] Done
+[48945] perform com.lunarg.vulkan operation: License
+[48945] 	- arguments:
+[48946] Done
+[48947] Installing component The Vulkan SDK Core (Always Installed)
+[48948] backup com.lunarg.vulkan.core operation: Extract
+[48948] 	- arguments: installer://com.lunarg.vulkan.core/1.4.304.1core.7z, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK
+[48948] Done
+[48948] perform com.lunarg.vulkan.core operation: Extract
+[48948] 	- arguments: installer://com.lunarg.vulkan.core/1.4.304.1core.7z, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK
+[57543] Done
+[57543] Starting elevated process "C:\\dev\\Jellybunny\\VulkanSDK-1.2.170.0-Installer.exe" with arguments " --start-server PRODUCTION,{7081cb12-68ae-490d-a251-00d78ad8ff9c},{d743c881-1ac2-48bc-9c5b-eb68e12b4cb8}"
+[58865] Finished starting elevated process.
+[58910] "Execute" as admin: true
+[58910] backup com.lunarg.vulkan.core operation: Execute
+[58911] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, INSTALLRT, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\VulkanRT.exe /s
+[58911] Done
+[58911] perform com.lunarg.vulkan.core operation: Execute
+[58912] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, INSTALLRT, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\VulkanRT.exe /s
+[58913] C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Helpers\\install_helper.exe" started, arguments: "INSTALLRT C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Helpers\\VulkanRT.exe /s
+[60260] Done
+[60260] "Execute" as admin: true
+[60260] backup com.lunarg.vulkan.core operation: Execute
+[60262] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK, SHORTCUTS, Vulkan SDK 1.4.304.1, UNDOEXECUTE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, REMOVESHORTCUTS, Vulkan SDK 1.4.304.1
+[60262] Done
+[60262] perform com.lunarg.vulkan.core operation: Execute
+[60263] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK, SHORTCUTS, Vulkan SDK 1.4.304.1, UNDOEXECUTE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, REMOVESHORTCUTS, Vulkan SDK 1.4.304.1
+[60264] C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Helpers\\install_helper.exe" started, arguments: "C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK SHORTCUTS Vulkan SDK 1.4.304.1
+[62515] Done
+[62516] "Execute" as admin: true
+[62516] backup com.lunarg.vulkan.core operation: Execute
+[62516] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, CLEANEXPLICIT, VkLayer_api_dump.json
+[62516] Done
+[62516] perform com.lunarg.vulkan.core operation: Execute
+[62517] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, CLEANEXPLICIT, VkLayer_api_dump.json
+[62518] C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Helpers\\install_helper.exe" started, arguments: "CLEANEXPLICIT VkLayer_api_dump.json
+[62527] Done
+[62527] "Execute" as admin: true
+[62527] backup com.lunarg.vulkan.core operation: Execute
+[62528] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, ADDEXPLICIT, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_api_dump.json, UNDOEXECUTE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, DELKEYVALUE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_api_dump.json
+[62528] Done
+[62528] perform com.lunarg.vulkan.core operation: Execute
+[62529] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, ADDEXPLICIT, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_api_dump.json, UNDOEXECUTE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, DELKEYVALUE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_api_dump.json
+[62530] C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Helpers\\install_helper.exe" started, arguments: "ADDEXPLICIT C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Bin\\VkLayer_api_dump.json
+[62539] Done
+[62540] "Execute" as admin: true
+[62540] backup com.lunarg.vulkan.core operation: Execute
+[62540] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, CLEANEXPLICIT, VkLayer_gfxreconstruct.json
+[62540] Done
+[62540] perform com.lunarg.vulkan.core operation: Execute
+[62541] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, CLEANEXPLICIT, VkLayer_gfxreconstruct.json
+[62541] C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Helpers\\install_helper.exe" started, arguments: "CLEANEXPLICIT VkLayer_gfxreconstruct.json
+[62550] Done
+[62551] "Execute" as admin: true
+[62551] backup com.lunarg.vulkan.core operation: Execute
+[62552] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, ADDEXPLICIT, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_gfxreconstruct.json, UNDOEXECUTE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, DELKEYVALUE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_gfxreconstruct.json
+[62552] Done
+[62552] perform com.lunarg.vulkan.core operation: Execute
+[62553] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, ADDEXPLICIT, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_gfxreconstruct.json, UNDOEXECUTE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, DELKEYVALUE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_gfxreconstruct.json
+[62553] C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Helpers\\install_helper.exe" started, arguments: "ADDEXPLICIT C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Bin\\VkLayer_gfxreconstruct.json
+[62562] Done
+[62563] "Execute" as admin: true
+[62563] backup com.lunarg.vulkan.core operation: Execute
+[62563] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, CLEANEXPLICIT, VkLayer_khronos_synchronization2.json
+[62563] Done
+[62563] perform com.lunarg.vulkan.core operation: Execute
+[62564] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, CLEANEXPLICIT, VkLayer_khronos_synchronization2.json
+[62565] C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Helpers\\install_helper.exe" started, arguments: "CLEANEXPLICIT VkLayer_khronos_synchronization2.json
+[62574] Done
+[62574] "Execute" as admin: true
+[62574] backup com.lunarg.vulkan.core operation: Execute
+[62575] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, ADDEXPLICIT, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_khronos_synchronization2.json, UNDOEXECUTE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, DELKEYVALUE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_khronos_synchronization2.json
+[62575] Done
+[62575] perform com.lunarg.vulkan.core operation: Execute
+[62576] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, ADDEXPLICIT, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_khronos_synchronization2.json, UNDOEXECUTE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, DELKEYVALUE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_khronos_synchronization2.json
+[62577] C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Helpers\\install_helper.exe" started, arguments: "ADDEXPLICIT C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Bin\\VkLayer_khronos_synchronization2.json
+[62586] Done
+[62586] "Execute" as admin: true
+[62586] backup com.lunarg.vulkan.core operation: Execute
+[62586] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, CLEANEXPLICIT, VkLayer_khronos_validation.json
+[62586] Done
+[62587] perform com.lunarg.vulkan.core operation: Execute
+[62587] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, CLEANEXPLICIT, VkLayer_khronos_validation.json
+[62588] C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Helpers\\install_helper.exe" started, arguments: "CLEANEXPLICIT VkLayer_khronos_validation.json
+[62597] Done
+[62597] "Execute" as admin: true
+[62597] backup com.lunarg.vulkan.core operation: Execute
+[62598] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, ADDEXPLICIT, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_khronos_validation.json, UNDOEXECUTE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, DELKEYVALUE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_khronos_validation.json
+[62598] Done
+[62598] perform com.lunarg.vulkan.core operation: Execute
+[62599] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, ADDEXPLICIT, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_khronos_validation.json, UNDOEXECUTE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, DELKEYVALUE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_khronos_validation.json
+[62600] C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Helpers\\install_helper.exe" started, arguments: "ADDEXPLICIT C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Bin\\VkLayer_khronos_validation.json
+[62609] Done
+[62609] "Execute" as admin: true
+[62609] backup com.lunarg.vulkan.core operation: Execute
+[62610] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, CLEANEXPLICIT, VkLayer_monitor.json
+[62610] Done
+[62610] perform com.lunarg.vulkan.core operation: Execute
+[62611] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, CLEANEXPLICIT, VkLayer_monitor.json
+[62611] C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Helpers\\install_helper.exe" started, arguments: "CLEANEXPLICIT VkLayer_monitor.json
+[62620] Done
+[62621] "Execute" as admin: true
+[62621] backup com.lunarg.vulkan.core operation: Execute
+[62622] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, ADDEXPLICIT, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_monitor.json, UNDOEXECUTE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, DELKEYVALUE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_monitor.json
+[62622] Done
+[62622] perform com.lunarg.vulkan.core operation: Execute
+[62623] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, ADDEXPLICIT, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_monitor.json, UNDOEXECUTE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, DELKEYVALUE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_monitor.json
+[62623] C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Helpers\\install_helper.exe" started, arguments: "ADDEXPLICIT C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Bin\\VkLayer_monitor.json
+[62632] Done
+[62633] "Execute" as admin: true
+[62633] backup com.lunarg.vulkan.core operation: Execute
+[62633] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, CLEANEXPLICIT, VkLayer_screenshot.json
+[62633] Done
+[62633] perform com.lunarg.vulkan.core operation: Execute
+[62634] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, CLEANEXPLICIT, VkLayer_screenshot.json
+[62634] C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Helpers\\install_helper.exe" started, arguments: "CLEANEXPLICIT VkLayer_screenshot.json
+[62643] Done
+[62644] "Execute" as admin: true
+[62644] backup com.lunarg.vulkan.core operation: Execute
+[62645] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, ADDEXPLICIT, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_screenshot.json, UNDOEXECUTE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, DELKEYVALUE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_screenshot.json
+[62645] Done
+[62645] perform com.lunarg.vulkan.core operation: Execute
+[62646] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, ADDEXPLICIT, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_screenshot.json, UNDOEXECUTE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, DELKEYVALUE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_screenshot.json
+[62646] C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Helpers\\install_helper.exe" started, arguments: "ADDEXPLICIT C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Bin\\VkLayer_screenshot.json
+[62655] Done
+[62656] "Execute" as admin: true
+[62656] backup com.lunarg.vulkan.core operation: Execute
+[62656] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, CLEANEXPLICIT, VkLayer_khronos_profiles.json
+[62656] Done
+[62656] perform com.lunarg.vulkan.core operation: Execute
+[62657] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, CLEANEXPLICIT, VkLayer_khronos_profiles.json
+[62658] C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Helpers\\install_helper.exe" started, arguments: "CLEANEXPLICIT VkLayer_khronos_profiles.json
+[62666] Done
+[62667] "Execute" as admin: true
+[62667] backup com.lunarg.vulkan.core operation: Execute
+[62668] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, ADDEXPLICIT, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_khronos_profiles.json, UNDOEXECUTE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, DELKEYVALUE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_khronos_profiles.json
+[62668] Done
+[62668] perform com.lunarg.vulkan.core operation: Execute
+[62669] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, ADDEXPLICIT, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_khronos_profiles.json, UNDOEXECUTE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, DELKEYVALUE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_khronos_profiles.json
+[62670] C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Helpers\\install_helper.exe" started, arguments: "ADDEXPLICIT C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Bin\\VkLayer_khronos_profiles.json
+[62678] Done
+[62679] "Execute" as admin: true
+[62679] backup com.lunarg.vulkan.core operation: Execute
+[62679] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, CLEANEXPLICIT, VkLayer_khronos_shader_object.json
+[62679] Done
+[62679] perform com.lunarg.vulkan.core operation: Execute
+[62680] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, CLEANEXPLICIT, VkLayer_khronos_shader_object.json
+[62681] C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Helpers\\install_helper.exe" started, arguments: "CLEANEXPLICIT VkLayer_khronos_shader_object.json
+[62690] Done
+[62691] "Execute" as admin: true
+[62691] backup com.lunarg.vulkan.core operation: Execute
+[62692] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, ADDEXPLICIT, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_khronos_shader_object.json, UNDOEXECUTE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, DELKEYVALUE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_khronos_shader_object.json
+[62692] Done
+[62692] perform com.lunarg.vulkan.core operation: Execute
+[62693] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, ADDEXPLICIT, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_khronos_shader_object.json, UNDOEXECUTE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, DELKEYVALUE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_khronos_shader_object.json
+[62693] C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Helpers\\install_helper.exe" started, arguments: "ADDEXPLICIT C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Bin\\VkLayer_khronos_shader_object.json
+[62702] Done
+[62703] "Execute" as admin: true
+[62703] backup com.lunarg.vulkan.core operation: Execute
+[62703] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, CLEANEXPLICIT, VkLayer_crash_diagnostic.json
+[62703] Done
+[62703] perform com.lunarg.vulkan.core operation: Execute
+[62704] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, CLEANEXPLICIT, VkLayer_crash_diagnostic.json
+[62705] C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Helpers\\install_helper.exe" started, arguments: "CLEANEXPLICIT VkLayer_crash_diagnostic.json
+[62714] Done
+[62714] "Execute" as admin: true
+[62714] backup com.lunarg.vulkan.core operation: Execute
+[62715] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, ADDEXPLICIT, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_crash_diagnostic.json, UNDOEXECUTE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, DELKEYVALUE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_crash_diagnostic.json
+[62715] Done
+[62715] perform com.lunarg.vulkan.core operation: Execute
+[62716] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, ADDEXPLICIT, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_crash_diagnostic.json, UNDOEXECUTE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, DELKEYVALUE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin\VkLayer_crash_diagnostic.json
+[62717] C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Helpers\\install_helper.exe" started, arguments: "ADDEXPLICIT C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Bin\\VkLayer_crash_diagnostic.json
+[62726] Done
+[62726] "Execute" as admin: true
+[62726] backup com.lunarg.vulkan.core operation: Execute
+[62727] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, CLEANEXPLICIT, VkLayer_device_simulation.json
+[62727] Done
+[62727] perform com.lunarg.vulkan.core operation: Execute
+[62727] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, CLEANEXPLICIT, VkLayer_device_simulation.json
+[62728] C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Helpers\\install_helper.exe" started, arguments: "CLEANEXPLICIT VkLayer_device_simulation.json
+[62737] Done
+[62738] "Execute" as admin: true
+[62738] backup com.lunarg.vulkan.core operation: Execute
+[62740] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin, NOP, UNDOEXECUTE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin, REMOVE
+[62740] Done
+[62740] perform com.lunarg.vulkan.core operation: Execute
+[62742] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin, NOP, UNDOEXECUTE, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin, REMOVE
+[62743] C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Helpers\\install_helper.exe" started, arguments: "C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Bin NOP
+[62752] Done
+[62753] "Execute" as admin: true
+[62753] backup com.lunarg.vulkan.core operation: Execute
+[62754] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin, ADD
+[62754] Done
+[62754] perform com.lunarg.vulkan.core operation: Execute
+[62755] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Helpers\install_helper.exe, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK\Bin, ADD
+[62756] C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Helpers\\install_helper.exe" started, arguments: "C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK\\Bin ADD
+[64410] Done
+[64410] backup com.lunarg.vulkan.core operation: License
+[64410] 	- arguments:
+[64410] Done
+[64410] perform com.lunarg.vulkan.core operation: License
+[64410] 	- arguments:
+[64411] Done
+[64412] Installing component Shader Toolchain Debug Symbols - 64-bit
+[64412] backup com.lunarg.vulkan.debug operation: Extract
+[64412] 	- arguments: installer://com.lunarg.vulkan.debug/1.4.304.1debug.7z, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK
+[64412] Done
+[64412] perform com.lunarg.vulkan.debug operation: Extract
+[64412] 	- arguments: installer://com.lunarg.vulkan.debug/1.4.304.1debug.7z, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK
+[73846] Done
+[73847] backup com.lunarg.vulkan.debug operation: License
+[73847] 	- arguments:
+[73847] Done
+[73847] perform com.lunarg.vulkan.debug operation: License
+[73847] 	- arguments:
+[73848] Done
+[73849] Installing component Volk header, source, and library.
+[73849] backup com.lunarg.vulkan.volk operation: Extract
+[73849] 	- arguments: installer://com.lunarg.vulkan.volk/1.4.304.1Volk.7z, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK
+[73849] Done
+[73849] perform com.lunarg.vulkan.volk operation: Extract
+[73849] 	- arguments: installer://com.lunarg.vulkan.volk/1.4.304.1Volk.7z, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK
+[73866] Done
+[73867] backup com.lunarg.vulkan.volk operation: License
+[73867] 	- arguments:
+[73867] Done
+[73867] perform com.lunarg.vulkan.volk operation: License
+[73867] 	- arguments:
+[73868] Done
+[73869] Installing component Vulkan Memory Allocator header.
+[73869] backup com.lunarg.vulkan.vma operation: Extract
+[73869] 	- arguments: installer://com.lunarg.vulkan.vma/1.4.304.1VMA.7z, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK
+[73869] Done
+[73869] perform com.lunarg.vulkan.vma operation: Extract
+[73869] 	- arguments: installer://com.lunarg.vulkan.vma/1.4.304.1VMA.7z, C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK
+[73878] Done
+[73878] backup com.lunarg.vulkan.vma operation: License
+[73878] 	- arguments:
+[73878] Done
+[73878] perform com.lunarg.vulkan.vma operation: License
+[73878] 	- arguments:
+[73879] Done
+[73884] Writing maintenance tool: "C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK/maintenancetool.exe.new"
+[73885] Writing maintenance tool.
+[73996] Wrote permissions for maintenance tool.
+[74102] Maintenance tool restart: false.
+[74104] Installation finished!
+[74161] perform  operation: Delete
+[74161] 	- arguments: C:\dev\Jellybunny\Jellybunny\vendor\VulkanSDK/Helpers/VC_redist.x64.exe
+[74163] Warning: QString::arg: Argument missing: Run the Vulkan Configurator and Hardware Capabilities Viewer, Vulkan SDK 1.4.304.1
+[74164] Component name: com.lunarg.vulkan.core
+[74164] perform  operation: Execute
+[74164] 	- arguments: reg, ADD, HKEY_LOCAL_MACHINE\SOFTWARE\LunarG\VulkanSDK, /v, com.lunarg.vulkan.core, /t, REG_DWORD, /d, 1, /f
+[74164] reg" started, arguments: "ADD HKEY_LOCAL_MACHINE\\SOFTWARE\\LunarG\\VulkanSDK /v com.lunarg.vulkan.core /t REG_DWORD /d 1 /f
+[74165] Done
+[74174] Done
+[74175] Is Installed
+[74175] Component name: com.lunarg.vulkan.debug
+[74175] perform  operation: Execute
+[74175] 	- arguments: reg, ADD, HKEY_LOCAL_MACHINE\SOFTWARE\LunarG\VulkanSDK, /v, com.lunarg.vulkan.debug, /t, REG_DWORD, /d, 1, /f
+[74175] reg" started, arguments: "ADD HKEY_LOCAL_MACHINE\\SOFTWARE\\LunarG\\VulkanSDK /v com.lunarg.vulkan.debug /t REG_DWORD /d 1 /f
+[74183] Done
+[74185] Is Installed
+[74185] Component name: com.lunarg.vulkan.glm
+[74185] perform  operation: Execute
+[74185] 	- arguments: reg, ADD, HKEY_LOCAL_MACHINE\SOFTWARE\LunarG\VulkanSDK, /v, com.lunarg.vulkan.glm, /t, REG_DWORD, /d, 0, /f
+[74185] reg" started, arguments: "ADD HKEY_LOCAL_MACHINE\\SOFTWARE\\LunarG\\VulkanSDK /v com.lunarg.vulkan.glm /t REG_DWORD /d 0 /f
+[74192] Done
+[74192] Was not installed
+[74192] Component name: com.lunarg.vulkan.sdl2
+[74192] perform  operation: Execute
+[74192] 	- arguments: reg, ADD, HKEY_LOCAL_MACHINE\SOFTWARE\LunarG\VulkanSDK, /v, com.lunarg.vulkan.sdl2, /t, REG_DWORD, /d, 0, /f
+[74192] reg" started, arguments: "ADD HKEY_LOCAL_MACHINE\\SOFTWARE\\LunarG\\VulkanSDK /v com.lunarg.vulkan.sdl2 /t REG_DWORD /d 0 /f
+[74200] Done
+[74200] Was not installed
+[74200] Component name: com.lunarg.vulkan.volk
+[74200] perform  operation: Execute
+[74200] 	- arguments: reg, ADD, HKEY_LOCAL_MACHINE\SOFTWARE\LunarG\VulkanSDK, /v, com.lunarg.vulkan.volk, /t, REG_DWORD, /d, 1, /f
+[74200] reg" started, arguments: "ADD HKEY_LOCAL_MACHINE\\SOFTWARE\\LunarG\\VulkanSDK /v com.lunarg.vulkan.volk /t REG_DWORD /d 1 /f
+[74208] Done
+[74208] Is Installed
+[74208] Component name: com.lunarg.vulkan.vma
+[74208] perform  operation: Execute
+[74208] 	- arguments: reg, ADD, HKEY_LOCAL_MACHINE\SOFTWARE\LunarG\VulkanSDK, /v, com.lunarg.vulkan.vma, /t, REG_DWORD, /d, 1, /f
+[74208] reg" started, arguments: "ADD HKEY_LOCAL_MACHINE\\SOFTWARE\\LunarG\\VulkanSDK /v com.lunarg.vulkan.vma /t REG_DWORD /d 1 /f
+[74216] Done
+[74216] Is Installed
+[142755] starting "C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK/Helpers/launch_helper.exe" ("C:\\dev\\Jellybunny\\Jellybunny\\vendor\\VulkanSDK")

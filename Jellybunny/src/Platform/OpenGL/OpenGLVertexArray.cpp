@@ -62,8 +62,43 @@ namespace Jellybunny
 		for (const auto& element : layout)
 		{
 			glEnableVertexAttribArray(i);
-			glVertexAttribPointer(i, element.GetComponentCount(), ShaderDataTypeToOpenGLBaseType(element.Type), element.Normalized ? GL_TRUE : GL_FALSE, layout.GetStride(), (const void*)element.Offset); // hehe... why r u here?
-			i++;
+			switch (element.Type)
+			{
+				case ShaderDataType::Float:
+				case ShaderDataType::Float2:
+				case ShaderDataType::Float3:
+				case ShaderDataType::Float4:
+				{
+					glVertexAttribPointer(i, element.GetComponentCount(), ShaderDataTypeToOpenGLBaseType(element.Type), element.Normalized ? GL_TRUE : GL_FALSE, layout.GetStride(), (const void*)element.Offset); // hehe... why r u here?
+					i++;
+					break;
+				}
+				case ShaderDataType::Int:
+				case ShaderDataType::Int2:
+				case ShaderDataType::Int3:
+				case ShaderDataType::Int4:
+				case ShaderDataType::Bool:
+				{
+					glVertexAttribIPointer(i, element.GetComponentCount(), ShaderDataTypeToOpenGLBaseType(element.Type), layout.GetStride(), (const void*)element.Offset); // hehe... why r u here?
+					i++;
+					break;
+				}
+				case ShaderDataType::Mat3:
+				case ShaderDataType::Mat4:
+				{
+					uint8_t count = element.GetComponentCount();
+					for (uint8_t j = 0; j < count; j++)
+					{
+						glEnableVertexAttribArray(i);
+						glVertexAttribPointer(i, element.GetComponentCount(), ShaderDataTypeToOpenGLBaseType(element.Type), element.Normalized ? GL_TRUE : GL_FALSE, layout.GetStride(), (const void*)(element.Offset + sizeof(float) * count * i)); // hehe... why r u here?
+						glVertexAttribDivisor(i, 1);
+						i++;
+					}
+					break;
+				}
+				default:
+					JB_CORE_ASS(false, "Strange Unidentified Shader Type, Asshole!");
+			}
 		}
 		m_VertexBuffers.push_back(vertexBuffer);
 	}

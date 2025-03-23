@@ -4,7 +4,7 @@
 
 namespace Jellybunny {
 
-	class JELLYBUNNY_API KeyEvent : public Event
+	class  KeyEvent : public Event
 	{
 	public:
 		inline int GetKeyCode() const { return m_KeyCode; }
@@ -17,27 +17,27 @@ namespace Jellybunny {
 		int m_KeyCode;
 	};
 
-	class JELLYBUNNY_API KeyPressedEvent : public KeyEvent
+	class  KeyPressedEvent : public KeyEvent
 	{
 	public:
-		KeyPressedEvent(int keycode, int repeatCount)
-			: KeyEvent(keycode), m_RepeatCount(repeatCount) {}
+		KeyPressedEvent(int keycode, bool repeat = false)
+			: KeyEvent(keycode), m_Repeat(repeat) {}
 
-		inline int GetRepeatCount() const { return m_RepeatCount; }
+		inline bool IsRepeat() const { return m_Repeat; }
 
 		std::string ToString() const override
 		{
 			std::stringstream ss;
-			ss << "KeyPressedEvent: " << m_KeyCode << " (" << m_RepeatCount << " repeats)";
+			ss << "KeyPressedEvent: " << m_KeyCode << " (REPEAT : " << m_Repeat << ")";
 			return ss.str();
 		}
 
 		EVENT_CLASS_TYPE(KeyPressed)
 	private:
-		int m_RepeatCount;
+		bool m_Repeat;
 	};
 
-	class JELLYBUNNY_API KeyReleasedEvent : public KeyEvent
+	class  KeyReleasedEvent : public KeyEvent
 	{
 	public:
 		KeyReleasedEvent(int keycode)
@@ -53,7 +53,7 @@ namespace Jellybunny {
 		EVENT_CLASS_TYPE(KeyReleased)
 	};
 
-	class JELLYBUNNY_API KeyTypedEvent : public KeyEvent
+	class  KeyTypedEvent : public KeyEvent
 	{
 	public:
 		KeyTypedEvent(int keycode)

@@ -5,7 +5,7 @@
 #include "Jellybunny/Event/Event.h"
 
 namespace Jellybunny {
-	class JELLYBUNNY_API Layer
+	class Layer
 	{
 	public:
 		Layer(const std::string& name = "Layer");

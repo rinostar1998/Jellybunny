@@ -5,7 +5,7 @@
 
 namespace Jellybunny
 {
-	class JELLYBUNNY_API LayerStack
+	class LayerStack
 	{
 	public:
 		LayerStack();
