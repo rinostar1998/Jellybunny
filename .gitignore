@@ -9,9 +9,4 @@ bin-int/
 Jellybunny-Director/JellybunnyProfile-Startup.json
 Jellybunny-Director/JellybunnyProfile-Shutdown.json
 Jellybunny-Director/JellybunnyProfile-Runtime.json
-/Jellybunny/vendor/VulkanSDK
-/Jellybunny/vendor/VulkanSDK
-Jellybunny/vendor/VulkanSDK/Lib/shaderc_sharedd.lib
-Jellybunny/vendor/VulkanSDK/Lib/shaderc_combinedd.lib
-*.lib
-Jellybunny/vendor/VulkanSDK/Lib/SPIRV-Tools-optd.lib
+Jellybunny/vendor/VulkanSDK/
