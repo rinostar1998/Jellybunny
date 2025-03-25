@@ -33,6 +33,15 @@ group "Dependencies"
 	include "Jellybunny/vendor/yaml-cpp"
 group ""
 
+group "Core"
 include "Jellybunny"
+include "Jellybunny-ScriptCore"
+group ""
+
+group "Tools"
 include "Jellybunny-Director"
+group ""
+
+group "Misc"
 include "Sandbox-Test"
+group ""

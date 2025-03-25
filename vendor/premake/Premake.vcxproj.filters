@@ -28,6 +28,9 @@
     <Filter Include="..\Jellybunny-Director">
       <UniqueIdentifier>{4576385E-3170-61B0-1ADD-F7C00676C71C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="..\Jellybunny-ScriptCore">
+      <UniqueIdentifier>{47DB06A2-3300-5622-5C4B-3BB248CF5440}</UniqueIdentifier>
+    </Filter>
     <Filter Include="..\Sandbox-Test">
       <UniqueIdentifier>{0C7623B9-7801-917D-8112-1472ED1CED7D}</UniqueIdentifier>
     </Filter>
@@ -35,6 +38,9 @@
   <ItemGroup>
     <None Include="..\..\Jellybunny-Director\premake5.lua">
       <Filter>..\Jellybunny-Director</Filter>
+    </None>
+    <None Include="..\..\Jellybunny-ScriptCore\premake5.lua">
+      <Filter>..\Jellybunny-ScriptCore</Filter>
     </None>
     <None Include="..\..\Jellybunny\premake5.lua">
       <Filter>..\Jellybunny</Filter>

@@ -1,17 +1,10 @@
 SCNE: UNTLTD
 ENT_ARR:
-  - ENTY: 2299816908
-    TAGCMP:
-      TAG: Fuckboy9000 (Unnamed)
-    TRNSCMP:
-      POS: [0, 0, 0]
-      ROT: [0, 0, 0]
-      SCL: [1, 1, 1]
   - ENTY: 1893214724
     TAGCMP:
-      TAG: Fuckboy9000 (Unnamed)
+      TAG: Camera
     TRNSCMP:
-      POS: [0, 0.886765003, 10]
+      POS: [1.5, -1.5, 10]
       ROT: [0, 0, 0]
       SCL: [1, 1, 1]
     CMRACMP:
@@ -33,13 +26,13 @@ ENT_ARR:
       SIZE: [0.5, 0.5]
       DENS: 100
       FRCT: 0.800000012
-      RST: 1.19000006
+      RST: 1.10000002
       RTTH: 0.5
   - ENTY: 4168473654
     TAGCMP:
-      TAG: Fuckboy9000 (Unnamed)
+      TAG: Ball
     TRNSCMP:
-      POS: [1.49866056, -1.81824899, -7.68341124e-09]
+      POS: [1.5, -1.5, 0]
       ROT: [0, 0, 0]
       SCL: [0.999996424, 1, 1]
     CRCL:
@@ -54,7 +47,7 @@ ENT_ARR:
       RAD: 0.5
       DENS: 100
       FRCT: 0.800000012
-      RST: 1.14999998
+      RST: 1.10000002
       RTTH: 0.5
   - ENTY: 3369489856
     TAGCMP:
@@ -65,6 +58,7 @@ ENT_ARR:
       SCL: [13.4000053, 1, 1]
     SPRTCMP:
       CLR: [1, 0, 0, 1]
+      UVSCL: 1
     RGDBDY2D:
       BDYTYP: PASS
       FXDROT: false
@@ -84,6 +78,8 @@ ENT_ARR:
       SCL: [13.3999996, 1, 1]
     SPRTCMP:
       CLR: [1, 0, 0, 1]
+      TXUR: assets\textures\FrownExtraMad.png
+      UVSCL: 7.30000019
     RGDBDY2D:
       BDYTYP: PASS
       FXDROT: false
@@ -103,6 +99,8 @@ ENT_ARR:
       SCL: [13.4000072, 0.999999762, 1]
     SPRTCMP:
       CLR: [1, 0, 0, 1]
+      TXUR: assets\textures\Frown.bmp
+      UVSCL: 1
     RGDBDY2D:
       BDYTYP: PASS
       FXDROT: false
@@ -122,6 +120,7 @@ ENT_ARR:
       SCL: [13.4000092, 1.00000024, 1]
     SPRTCMP:
       CLR: [1, 0, 0, 1]
+      UVSCL: 1
     RGDBDY2D:
       BDYTYP: PASS
       FXDROT: false

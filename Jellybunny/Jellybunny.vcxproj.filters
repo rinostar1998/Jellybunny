@@ -28,6 +28,9 @@
     <Filter Include="src\Jellybunny\Scene">
       <UniqueIdentifier>{C5200E04-B1AF-97CD-5ACE-ABC8463CA873}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Jellybunny\Scripting">
+      <UniqueIdentifier>{AABC1E8A-96E1-6D0A-BF2C-539AABB06C28}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Jellybunny\Utils">
       <UniqueIdentifier>{08B53B04-F443-C5CD-9D62-D9C889D0D573}</UniqueIdentifier>
     </Filter>
@@ -203,6 +206,9 @@
     </ClInclude>
     <ClInclude Include="src\Jellybunny\Scene\ScriptableEntity.h">
       <Filter>src\Jellybunny\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Jellybunny\Scripting\ScriptModule.h">
+      <Filter>src\Jellybunny\Scripting</Filter>
     </ClInclude>
     <ClInclude Include="src\Jellybunny\Utils\PlatformUtils.h">
       <Filter>src\Jellybunny\Utils</Filter>
@@ -1576,6 +1582,9 @@
     </ClCompile>
     <ClCompile Include="src\Jellybunny\Scene\SceneSerializer.cpp">
       <Filter>src\Jellybunny\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Jellybunny\Scripting\ScriptModule.cpp">
+      <Filter>src\Jellybunny\Scripting</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp">
       <Filter>src\Platform\OpenGL</Filter>

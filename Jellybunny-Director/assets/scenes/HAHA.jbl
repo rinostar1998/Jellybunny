@@ -1,0 +1,122 @@
+SCNE: UNTLTD
+ENT_ARR:
+  - ENTY: 1778965482295820461
+    TAGCMP:
+      TAG: Fuckboy9000 (Unnamed)
+    TRNSCMP:
+      POS: [8.91906261, 0.568776786, 0]
+      ROT: [0, 0, 0.0346314535]
+      SCL: [8.54879951, 8.54879951, 1]
+    CRCL:
+      CLR: [1, 0, 0, 1]
+      THK: 1
+      SFT: 0.00499999989
+    RGDBDY2D:
+      BDYTYP: PASS
+      FXDROT: false
+    BLCLD2D:
+      OFFSET: [0, 0]
+      RAD: 0.5
+      DENS: 100
+      FRCT: 0.800000012
+      RST: 0.0500000007
+      RTTH: 0.5
+  - ENTY: 12556156707461044661
+    TAGCMP:
+      TAG: Fuckboy9000 (Unnamed)
+    TRNSCMP:
+      POS: [0, 5, 10]
+      ROT: [0, 0, 0]
+      SCL: [1, 1, 1]
+    CMRACMP:
+      CMRA:
+        PROJTYP: 0
+        FOV: 1.57079637
+        PSPNR: 0.00999999978
+        PSPFR: 100000
+        OTHSZ: 10
+        OTHNR: -1
+        OTHFR: 1
+      PRMY: true
+      FIXASRT: false
+  - ENTY: 6283906285320613439
+    TAGCMP:
+      TAG: Fuckboy9000 (Unnamed)
+    TRNSCMP:
+      POS: [9.80327129, 8.79786015, 0]
+      ROT: [0, 0, 0.0346314535]
+      SCL: [8.54879951, 8.54879951, 1]
+    CRCL:
+      CLR: [1, 0, 0, 1]
+      THK: 1
+      SFT: 0.00499999989
+    RGDBDY2D:
+      BDYTYP: PASS
+      FXDROT: false
+    BLCLD2D:
+      OFFSET: [0, 0]
+      RAD: 0.5
+      DENS: 100
+      FRCT: 0.800000012
+      RST: 0.0500000007
+      RTTH: 0.5
+  - ENTY: 8442359984065996443
+    TAGCMP:
+      TAG: Fuckboy9000 (Unnamed)
+    TRNSCMP:
+      POS: [-10.9554415, 40.0991631, 0]
+      ROT: [0, 0, 0]
+      SCL: [1, 1, 1]
+    SPRTCMP:
+      CLR: [1, 0, 0, 1]
+      UVSCL: 1
+    RGDBDY2D:
+      BDYTYP: ACT
+      FXDROT: false
+    BXCLD2D:
+      OFFSET: [0, 0]
+      SIZE: [0.5, 0.5]
+      DENS: 0.100000001
+      FRCT: 0
+      RST: 0.360000014
+      RTTH: 0.5
+  - ENTY: 7854386586539633313
+    TAGCMP:
+      TAG: Fuckboy9000 (Unnamed)
+    TRNSCMP:
+      POS: [1.07288361e-05, 0.0375168324, 0]
+      ROT: [0, 0, 0]
+      SCL: [10, 1, 1]
+    SPRTCMP:
+      CLR: [1, 1, 1, 1]
+      UVSCL: 1
+    RGDBDY2D:
+      BDYTYP: PASS
+      FXDROT: false
+    BXCLD2D:
+      OFFSET: [0, 0]
+      SIZE: [0.5, 0.5]
+      DENS: 100
+      FRCT: 0.800000012
+      RST: 0.0500000007
+      RTTH: 0.5
+  - ENTY: 14218733267962258342
+    TAGCMP:
+      TAG: Fuckboy9000 (Unnamed)
+    TRNSCMP:
+      POS: [-8.60468483, 3.53891897, 0]
+      ROT: [0, 0, 2.35714579]
+      SCL: [9.99999809, 0.999987721, 1]
+    SPRTCMP:
+      CLR: [1, 1, 1, 1]
+      UVSCL: 1
+    RGDBDY2D:
+      BDYTYP: PASS
+      FXDROT: false
+    BXCLD2D:
+      OFFSET: [0, 0]
+      SIZE: [0.5, 0.5]
+      DENS: 100
+      FRCT: 0.800000012
+      RST: 0.0500000007
+      RTTH: 0.5

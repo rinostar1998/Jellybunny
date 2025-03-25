@@ -1,0 +1,6 @@
+C:\dev\Jellybunny\Jellybunny-Director\Resources\Scripts\Intermediates\Debug\Jellybunny-ScriptCore.csproj.AssemblyReference.cache
+C:\dev\Jellybunny\Jellybunny-Director\Resources\Scripts\Intermediates\Debug\Jellybunny-ScriptCore.csproj.CoreCompileInputs.cache
+C:\dev\Jellybunny\Jellybunny-Director\Resources\Scripts\Intermediates\Debug\Jellybunny-ScriptCore.dll
+C:\dev\Jellybunny\Jellybunny-Director\Resources\Scripts\Intermediates\Debug\Jellybunny-ScriptCore.pdb
+C:\dev\Jellybunny\Jellybunny-Director\Resources\Scripts\Jellybunny-ScriptCore.dll
+C:\dev\Jellybunny\Jellybunny-Director\Resources\Scripts\Jellybunny-ScriptCore.pdb

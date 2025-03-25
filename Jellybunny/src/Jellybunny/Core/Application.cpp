@@ -4,6 +4,7 @@
 #include "Jellybunny/Core/Log.h"
 
 #include "Jellybunny/Renderer/Renderer.h"
+#include "Jellybunny/Scripting/ScriptModule.h"
 
 #include "Jellybunny/Core/Input.h"
 #include <filesystem>
@@ -27,6 +28,7 @@ namespace Jellybunny
 		m_Window->SetEventCallback(JB_BIND_EVENT_FN(Application::OnEvent));
 
 		Renderer::Init();
+		ScriptModule::Init();
 
 		m_ImGuiLayer = new ImGuiLayer();
 		PushOverlay(m_ImGuiLayer);
@@ -35,6 +37,7 @@ namespace Jellybunny
 	Application::~Application()
 	{
 		JB_PROFILE_FUNCTION();
+		ScriptModule::Die();
 		Renderer::Die();
 	}
 

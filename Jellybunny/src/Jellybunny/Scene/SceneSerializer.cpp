@@ -176,6 +176,8 @@ namespace Jellybunny
 			out << YAML::BeginMap;
 			auto& spriteComp = entity.GetComponent<SpriteComponent>();
 			out << YAML::Key << "CLR" << YAML::Value << spriteComp.Color;
+			if(spriteComp.Texture) out << YAML::Key << "TXUR" << YAML::Value << spriteComp.Texture->GetPath();
+			out << YAML::Key << "UVSCL" << YAML::Value << spriteComp.uvScale;
 			out << YAML::EndMap;
 		}
 		if (entity.HasComponent<CircleComponent>())
@@ -304,6 +306,8 @@ namespace Jellybunny
 				{
 					auto& sc = deserializedEntity.AddComponent<SpriteComponent>();
 					sc.Color = spriteComp["CLR"].as<glm::vec4>();
+					if(spriteComp["TXUR"]) sc.Texture = Texture2D::Create(spriteComp["TXUR"].as<std::string>());
+					if(spriteComp["UVSCL"]) sc.uvScale = spriteComp["UVSCL"].as<float>();
 				}
 				auto circleComp = entity["CRCL"];
 				if (circleComp)

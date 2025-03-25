@@ -1,5 +1,16 @@
 SCNE: UNTLTD
 ENT_ARR:
+  - ENTY: 2494359919
+    TAGCMP:
+      TAG: Square
+    TRNSCMP:
+      POS: [0, 0, 0]
+      ROT: [0, 0, 0]
+      SCL: [1, 1, 1]
+    CRCL:
+      CLR: [1, 0, 0, 1]
+      THK: 0.100000001
+      SFT: 0.0949999988
   - ENTY: 1497709431
     TAGCMP:
       TAG: Camera
@@ -18,14 +29,3 @@ ENT_ARR:
         OTHFR: 1
       PRMY: true
       FIXASRT: false
-  - ENTY: 2494359919
-    TAGCMP:
-      TAG: Square
-    TRNSCMP:
-      POS: [0, 0, 0]
-      ROT: [0, 0, 0]
-      SCL: [1, 1, 1]
-    CRCL:
-      CLR: [1, 0, 0, 1]
-      THK: 0.100000001
-      SFT: 0.0949999988

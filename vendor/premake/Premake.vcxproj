@@ -78,6 +78,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="..\..\Jellybunny-Director\premake5.lua" />
+    <None Include="..\..\Jellybunny-ScriptCore\premake5.lua" />
     <None Include="..\..\Jellybunny\premake5.lua" />
     <None Include="..\..\Jellybunny\vendor\Box2D\premake5.lua" />
     <None Include="..\..\Jellybunny\vendor\GLFW\premake5.lua" />

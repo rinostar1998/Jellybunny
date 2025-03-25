@@ -44,11 +44,12 @@ project "Jellybunny"
 		"%{IncludeDir.glm}",
 		"%{IncludeDir.stb_image}",
 		"%{IncludeDir.entt}",
+		"%{IncludeDir.mono}",
 		"%{IncludeDir.yaml_cpp}",
 		"%{IncludeDir.ImGuizmo}",
 		"%{IncludeDir.VulkanSDK}"
 	}
-
+	
 	links
 	{
 		"Box2D",
@@ -56,7 +57,9 @@ project "Jellybunny"
 		"Glad",
 		"ImGui",
 		"yaml-cpp",
-		"Opengl32.lib"
+		"opengl32.lib",
+		
+		"%{Library.mono}"
 	}
 
 	filter "files:vendor/ImGuizmo/**.cpp"
@@ -65,8 +68,12 @@ project "Jellybunny"
 	filter "system:windows"
 		systemversion "latest"
 
-		defines
+		links
 		{
+			"%{Library.WinSock}",
+			"%{Library.Winmm}",
+			"%{Library.WinVersion}",
+			"%{Library.Bcrypt}"
 		}
 
 	filter "configurations:Debug"
