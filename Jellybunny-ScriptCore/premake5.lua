@@ -1,25 +1,3 @@
-project "Jellybunny-ScriptCore"
-kind "SharedLib"
-language "C#"
-dotnetframework "4.7.2"
-
-targetdir ("%{wks.location}/Jellybunny-Director/Resources/Scripts")
-objdir ("%{wks.location}/Jellybunny-Director/Resources/Scripts/Intermediates")
-
-files 
-{
-	"Source/**.cs",
-	"Properties/**.cs"
-}
-
-filter "configurations:Debug"
-	optimize "Off"
-	symbols "Default"
-
-filter "configurations:Release"
-	optimize "On"
-	symbols "Default"
-
-filter "configurations:Dist"
-	optimize "Full"
-	symbols "Off"
+version https://git-lfs.github.com/spec/v1
+oid sha256:3187af29910fb1e95a536ee9f51f8d8e9f99d573d4f9b0d19f2d580982dc98ce
+size 476

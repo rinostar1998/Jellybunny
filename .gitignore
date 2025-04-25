@@ -1,12 +1,3 @@
-# Directories
-.vs/
-bin/
-bin-int/
-
-# Files
-
-*.user
-Jellybunny-Director/JellybunnyProfile-Startup.json
-Jellybunny-Director/JellybunnyProfile-Shutdown.json
-Jellybunny-Director/JellybunnyProfile-Runtime.json
-Jellybunny/vendor/VulkanSDK/
+version https://git-lfs.github.com/spec/v1
+oid sha256:74446cace3aab8b4e518f0f5af780a53bfdfb2f229b07bb02da5fead9cdb2125
+size 239
