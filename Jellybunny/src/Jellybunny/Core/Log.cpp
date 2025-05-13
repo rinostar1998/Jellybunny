@@ -1,22 +1,3 @@
-#include "jbpch.h"
-#include "Log.h"
-
-#include "spdlog/sinks/stdout_color_sinks.h"
-
-namespace Jellybunny
-{
-
-	std::shared_ptr<spdlog::logger> Log::s_CoreLogger;
-	std::shared_ptr<spdlog::logger> Log::s_ClientLogger;
-	
-	void Log::Init()
-	{
-		spdlog::set_pattern("%^[%T] %n: %v%$");
-		s_CoreLogger = spdlog::stdout_color_mt("JELLYBUNNY");
-		s_CoreLogger->set_level(spdlog::level::trace);
-
-		s_ClientLogger = spdlog::stdout_color_mt("Application");
-		s_ClientLogger->set_level(spdlog::level::trace);
-	}
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2a8b148375405fdf7da5c2ea8a384ab28a2cc9d8385e8c789433429d8a2ddd27
+size 1086

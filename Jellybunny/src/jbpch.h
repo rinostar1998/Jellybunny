@@ -1,28 +1,3 @@
-#pragma once
-
-
-#ifdef JB_PLATFORM_WINDOWS
-	#ifndef NOMINMAX
-		// See github.com/skypjack/entt/wiki/Frequently-Asked-Questions#warning-c4003-the-min-the-max-and-the-macro
-		#define NOMINMAX
-	#endif
-#endif
-
-#include <iostream>
-#include <memory>
-#include <utility>
-#include <algorithm>
-#include <functional>
-
-#include <string>
-#include <sstream>
-#include <array>
-#include <vector>
-#include <unordered_map>
-#include <unordered_set>
-#include "Jellybunny/Core/Log.h"
-#include "Jellybunny/Debug/Instrumentality.h"
-
-#ifdef JB_PLATFORM_WINDOWS
-	#include <Windows.h>
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:23feb54380d258c4930b48d64f4c37704e09897138846cfdb6cdb4f4dc2ad184
+size 625

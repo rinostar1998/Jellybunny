@@ -1,6 +1,3 @@
-C:\dev\Jellybunny\Jellybunny-Director\Resources\Scripts\Intermediates\Debug\Jellybunny-ScriptCore.csproj.AssemblyReference.cache
-C:\dev\Jellybunny\Jellybunny-Director\Resources\Scripts\Intermediates\Debug\Jellybunny-ScriptCore.csproj.CoreCompileInputs.cache
-C:\dev\Jellybunny\Jellybunny-Director\Resources\Scripts\Intermediates\Debug\Jellybunny-ScriptCore.dll
-C:\dev\Jellybunny\Jellybunny-Director\Resources\Scripts\Intermediates\Debug\Jellybunny-ScriptCore.pdb
-C:\dev\Jellybunny\Jellybunny-Director\Resources\Scripts\Jellybunny-ScriptCore.dll
-C:\dev\Jellybunny\Jellybunny-Director\Resources\Scripts\Jellybunny-ScriptCore.pdb
+version https://git-lfs.github.com/spec/v1
+oid sha256:6e2b626eef8a154369ecca6fd640b0481a36248a5fd456e7edefcb464f680c17
+size 632
