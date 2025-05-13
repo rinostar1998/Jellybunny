@@ -1,4 +1,3 @@
-DA RULES:
-1. Don't make contributes that actively harm the users or anybody in anyway or something
-2. Don't make extra bugs by making fixing changes or something
-3. lol idk just be decent and you'll be fine
+version https://git-lfs.github.com/spec/v1
+oid sha256:f38895d52c84dc893b5ea011753ebf90b693c992b5e0bb71e51b8dac6d04d475
+size 211
