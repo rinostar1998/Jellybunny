@@ -1,5 +1,5 @@
-name: thing
-description: pull_request_template
+pull_request_template:
+
 body:
 - type: checkboxes
   id: cat-preferences
