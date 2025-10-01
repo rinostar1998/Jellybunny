@@ -1,21 +1,3 @@
-#pragma once
-
-#include <glm/glm.hpp>
-#include "Texture.h"
-
-namespace Jellybunny
-{
-	class SubTexture2D
-	{
-	public:
-		SubTexture2D(const Ref<Texture2D>& texture, const glm::vec2& min, const glm::vec2& max);
-
-		const Ref<Texture2D> GetTexture() const { return m_Texture; }
-		const glm::vec2* GetTexCoords() const { return m_TexCoords; }
-		static Ref<SubTexture2D> CreateFromCoords(const Ref<Texture2D>& atlas, const glm::vec2& coord, const glm::vec2 cellSize, const glm::vec2& spriteSize);
-	private:
-		Ref<Texture2D> m_Texture;
-
-		glm::vec2 m_TexCoords[4];
-	};
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e4f2028bb723443c0795c437fb1fb084a8f2fc51fa400c8757895360ee1f9842
+size 565
