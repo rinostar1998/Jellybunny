@@ -1,23 +1,3 @@
-#type vertex
-#version 330 core
-
-layout(location = 0) in vec3 a_Position;
-
-uniform mat4 u_ViewProjection;
-uniform mat4 u_Transform;
-
-void main()
-{
-	gl_Position = u_ViewProjection * u_Transform * vec4(a_Position, 1.0);
-}
-
-#type fragment
-#version 330 core
-
-layout(location = 0) out vec4 color;
-uniform vec4 u_Color;
-
-void main()
-{
-	color = u_Color;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:320b2b2342512e9b802e054fa61225b1e89d93c406721411a0c0c3b0447128c8
+size 490

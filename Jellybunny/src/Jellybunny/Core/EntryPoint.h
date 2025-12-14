@@ -1,25 +1,3 @@
-#pragma once
-#include "Jellybunny/Core/Core.h"
-#include "Jellybunny/Core/Application.h"
-
-#ifdef JB_PLATFORM_WINDOWS
-
-extern Jellybunny::Application* Jellybunny::CreateApplication(ApplicationCommandLineArgs args);
-int main(int argc, char** argv)
-{
-	Jellybunny::Log::Init();
-
-	JB_PROFILE_BEGIN_SESSION("Startup", "JellybunnyProfile-Startup.json");
-	auto app = Jellybunny::CreateApplication({ argc, argv });
-	JB_PROFILE_END_SESSION();
-
-	JB_PROFILE_BEGIN_SESSION("Runtime", "JellybunnyProfile-Runtime.json");
-	app->Run();
-	JB_PROFILE_END_SESSION();
-
-	JB_PROFILE_BEGIN_SESSION("Shutdown", "JellybunnyProfile-Shutdown.json");
-	delete app;
-	JB_PROFILE_END_SESSION();
-}
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:9f39462dbd6d1bd2727c5e8c6542093cd5e61e33e6162c0eb5d990e3600acdb6
+size 693

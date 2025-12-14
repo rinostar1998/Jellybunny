@@ -1,18 +1,3 @@
-#pragma once
-
-#include <glm/glm.hpp>
-
-namespace Jellybunny
-{
-	class Camera
-	{
-	public:
-		Camera() = default;
-
-		Camera(const glm::mat4& projection) : m_Projection(projection) {}
-		virtual ~Camera() = default;
-		const glm::mat4& GetProjection() const { return m_Projection; }
-	protected:
-		glm::mat4 m_Projection = glm::mat4(1.0f);
-	};
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:92c6341d6060deb530fee7fd2044688fd9fd2cbe0b189c63f83a8adbcf7c5723
+size 340

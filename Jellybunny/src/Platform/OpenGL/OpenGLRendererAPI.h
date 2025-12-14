@@ -1,19 +1,3 @@
-#pragma once
-
-#include "Jellybunny/Renderer/RendererAPI.h"
-
-namespace Jellybunny
-{
-	class OpenGLRendererAPI : public RendererAPI
-	{
-	public:
-		virtual void Init() override;
-		virtual void SetViewport(uint32_t x, uint32_t y, uint32_t width, uint32_t height) override;
-		virtual void SetClearColor(const glm::vec4& color) override;
-		virtual void Clear() override;
-
-		virtual void DrawIndexed(const Ref<VertexArray>& vertexArray, uint32_t indexCount = 0) override;
-		virtual void DrawLines(const Ref<VertexArray>& vertexArray, uint32_t vertexCount) override;
-		virtual void SetLineThickness(float thickness) override;
-	};
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:09835b5b11e059eeb318fed4f3a9508633f238c4ebdb6b3ca7a0787f93494a44
+size 634
